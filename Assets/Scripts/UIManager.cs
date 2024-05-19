@@ -124,8 +124,6 @@ public class UIManager : MonoBehaviour
         _transporter.EnableTransport();
         _helpCanvas.SetActive(true); // Activate the help canvas
         _cableGroup.SetActive(true);
-        
-        
     }
 
     public void HandleSkip()
