@@ -1,5 +1,6 @@
 using System.Collections;
 using DG.Tweening;
+using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.UI; // Ensure this is added to handle UI components directly
@@ -8,12 +9,15 @@ public class UIManager : MonoBehaviour
 {
     //[SerializeField] private SimplePrefabSpawner spawner;
     [SerializeField] private EquipmentTransporter _transporter;
+    
+    [Header("UI Buttons & Help Canvas")]
     [SerializeField] private Button _continueButton1; // For the first continue
     [SerializeField] private Button _continueButton2; // For the second continue
     [SerializeField] private Button _continueButton3; // For the third continue
     [SerializeField] private Button _skipButton;
     [SerializeField] private GameObject _helpCanvas; // UI canvas that contains help materials
 
+    [Header("Panels & Diagrams")]
     [SerializeField] private GameObject _onboard01;
     [SerializeField] private GameObject _onboard02;
     [SerializeField] private GameObject _onboard03;
@@ -21,10 +25,12 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject _diagram;
     [SerializeField] private GameObject _xlrCanvas;
 
+    [Header("Equipments")]
     [SerializeField] private GameObject _microphone;
 
     [SerializeField] private GameObject _cableGroup;
 
+    [Header("Audio Config")]
     [SerializeField] private AudioSource _canvasAudioSource;
     [SerializeField] private AudioClip _audioBoard01;
     [SerializeField] private AudioClip _audioBoard02;
@@ -40,7 +46,7 @@ public class UIManager : MonoBehaviour
 
     void Start()
     {
-        StartCoroutine(DelayBeforeVoiceover(2));
+        //StartCoroutine(DelayBeforeVoiceover(2));
         _bGM.Play(0);
         
         // Add listeners to buttons
@@ -65,17 +71,17 @@ public class UIManager : MonoBehaviour
 
     public void ShowOnboarding()
     {
-        StartCoroutine(DelayBeforeVoiceover(3));
+        //StartCoroutine(DelayBeforeVoiceover(3));
         _onboardMain.SetActive(true);
         _onboard01.SetActive(true);
         // Display initial onboarding message
         Debug.Log("Welcome to Audio School: Learn your sound tech skills!");
         // Additional logic for playing voiceover or showing visuals can be added here
         
-        StartCoroutine(DelayBeforeVoiceover(3));
-        _canvasAudioSource.PlayOneShot(_audioBoard01);
+        StartCoroutine(DelayBeforeVoiceover(3, _audioBoard01));
     }
 
+    [Button]
     public void ShowMessageTwo()
     {
         // Continue to the next part of onboarding
@@ -84,10 +90,10 @@ public class UIManager : MonoBehaviour
         Debug.Log("Lesson 1: Mapping the Vibrations - Connect the system.");
         
        // Additional voiceover or visual effects can be triggered here
-        StartCoroutine(DelayBeforeVoiceover(3));
-        _canvasAudioSource.PlayOneShot(_audioBoard02);
+        StartCoroutine(DelayBeforeVoiceover(3, _audioBoard02));
     }
 
+    [Button]
     public void ShowMessage3()
     {
         _onboard03.SetActive(true);
@@ -96,10 +102,10 @@ public class UIManager : MonoBehaviour
         _transporter.EnableTransport(); // Enable placing objects if part of onboarding requires this
         
         // Additional voiceover or visual effects can be triggered here
-        StartCoroutine(DelayBeforeVoiceover(3));
-        _canvasAudioSource.PlayOneShot(_audioBoard03);
+        StartCoroutine(DelayBeforeVoiceover(3, _audioBoard03));
     }
 
+    [Button]
     public void IntroToXLRCables()
     {
         _onboardMain.SetActive(false);
@@ -108,8 +114,7 @@ public class UIManager : MonoBehaviour
         _diagram.SetActive(true);
         
         
-        StartCoroutine(DelayBeforeVoiceover(2));
-        _canvasAudioSource.PlayOneShot(_audioBoard04);
+        StartCoroutine(DelayBeforeVoiceover(2, _audioBoard04));
         StartCoroutine(DelayBeforeStart());
         
     }
@@ -126,6 +131,7 @@ public class UIManager : MonoBehaviour
         _cableGroup.SetActive(true);
     }
 
+    [Button]
     public void HandleSkip()
     {
         
@@ -133,9 +139,10 @@ public class UIManager : MonoBehaviour
         StartLesson(); // Use StartLesson to unify the behavior
     }
 
-    private IEnumerator DelayBeforeVoiceover(float delay)
+    private IEnumerator DelayBeforeVoiceover(float delay, AudioClip audioClip)
     {
         yield return new WaitForSecondsRealtime(delay);
+        _canvasAudioSource.PlayOneShot(audioClip);
     }
     
     private IEnumerator DelayBeforeStart()
@@ -149,9 +156,7 @@ public class UIManager : MonoBehaviour
     public void FinishLesson()
     {
         _canvasAudioSource.PlayOneShot(_audioBoard06);
-        StartCoroutine(DelayBeforeVoiceover(8));
-        
-        _canvasAudioSource.PlayOneShot(_audioBoard05);
+        StartCoroutine(DelayBeforeVoiceover(8, _audioBoard05));
     }
     
     public void UpdateConnectionStatus(int index, bool status)
@@ -168,7 +173,5 @@ public class UIManager : MonoBehaviour
         }
         FinishLesson();  // Call FinishLesson when all connections are made
     }
-
-   
     
 }

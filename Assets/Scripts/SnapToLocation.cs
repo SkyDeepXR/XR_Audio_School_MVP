@@ -8,29 +8,50 @@ using Random = UnityEngine.Random;
 
 public class SnapToLocation : MonoBehaviour
 {
-   
+    public enum SocketType
+    {
+        XLR_MaleToFemale,
+        XLR_FemaleToMale
+    }
+
+    [SerializeField] private SocketType _socketType;
     
     
     private bool _grabbed;
     private bool _insideSnapZone;
     public bool snapped;
 
-    [SerializeField] private GameObject connector;
+    [SerializeField] private SnapObject connector;
     [SerializeField] private GameObject _snapRotationReference;
     [SerializeField] private AudioSource _audioSource;
     [SerializeField] private AudioClip[] _connectionSound;
 
+    // [Space] 
+    // [SerializeField] private SnapObject currentConnector;
+
     // Detects when connector game object has entered the snap zone radius
     private void OnTriggerEnter(Collider other)
     {
-        if (connector == null || _snapRotationReference == null)
-        {
-            Debug.LogWarning("Connector or Snap Rotation Reference is not assigned or not spawned yet.");
+        // if (connector == null || _snapRotationReference == null)
+        // {
+        //     Debug.LogWarning("Connector or Snap Rotation Reference is not assigned or not spawned yet.");
+        //     return;
+        // }
+        //
+        // if (other.gameObject.name == connector.name && !snapped)
+        // {
+        //     _insideSnapZone = true;
+        //     Debug.Log("entered");
+        //     SnapObject();
+        // }
+        
+        // NEW
+        if (!other.TryGetComponent(out SnapObject snapObject) || _snapRotationReference == null)
             return;
-        }
 
-        if (other.gameObject.name == connector.name && !snapped)
+        if (string.Equals(snapObject.connectorType.ToString(), _socketType.ToString() )&& !snapped)
         {
+            connector = snapObject;
             _insideSnapZone = true;
             Debug.Log("entered");
             SnapObject();
@@ -52,7 +73,7 @@ public class SnapToLocation : MonoBehaviour
             snapped = true;
         }
     }
-    private void FixedUpdate()
+    private void Update()
     {
         // Set grabbed to equal the boolean value "isGrabbed" from OVRGrabbable script
         //_grabbed = connector.GetComponent<OVRGrabbable>().isGrabbed; // check for different script
@@ -62,6 +83,10 @@ public class SnapToLocation : MonoBehaviour
             connector.gameObject.transform.rotation = _snapRotationReference.transform.rotation;
             //_audioSource.PlayOneShot(_connectionSound[Random.Range(0,2)], .5f);
         }
-        
+
+        if (connector.grabbed)
+        {
+            snapped = false;
+        }
     }
 }

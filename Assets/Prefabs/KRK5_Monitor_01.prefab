@@ -937,7 +937,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -955,9 +955,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52454c93ae79fb546a25e21baf7dfd01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _socketType: 0
   snapped: 0
   connector: {fileID: 0}
   _snapRotationReference: {fileID: 0}
+  _audioSource: {fileID: 0}
+  _connectionSound: []
 --- !u!1 &2921262105332898310
 GameObject:
   m_ObjectHideFlags: 0
@@ -1058,7 +1061,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockId: f8766c17-aaf8-4b55-9431-de8deea83842
-  instanceId: 8a325708-3a9e-4c59-bf0f-e564f6955470
+  instanceId: b0f792ee-0f54-4609-86c2-afb6d44a62f7
   version: 1
 --- !u!114 &2575880254228620574
 MonoBehaviour:
@@ -2360,7 +2363,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1954361117349705475
 Transform:
   m_ObjectHideFlags: 0
@@ -2414,9 +2417,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52454c93ae79fb546a25e21baf7dfd01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _socketType: 0
   snapped: 0
   connector: {fileID: 0}
   _snapRotationReference: {fileID: 6322770457357077948}
+  _audioSource: {fileID: 0}
+  _connectionSound: []
 --- !u!114 &7626659658639434853
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2430,7 +2436,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _audioManager: {fileID: 0}
+  _uiManager: {fileID: 0}
   isConnected: 0
+  connectionIndex: 0
 --- !u!1 &7055898821500526614
 GameObject:
   m_ObjectHideFlags: 0
