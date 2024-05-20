@@ -33,7 +33,7 @@ public class EquipmentTransporter : MonoBehaviour
 
     void Start()
     {
-        InitializePreviews(); // Make sure all previews are inactive at start.
+        //InitializePreviews(); // Make sure all previews are inactive at start.
     }
 
     private void InitializePreviews()
@@ -92,11 +92,11 @@ public class EquipmentTransporter : MonoBehaviour
             }
         }
 
-        if (OVRInput.GetDown(OVRInput.Button.One))
-        {
-            PlaceCurrentEquipment();
-            UpdatePreviewToNextEquipment();
-        }
+        // if (OVRInput.GetDown(OVRInput.Button.One))
+        // {
+        //     PlaceCurrentEquipment();
+        //     UpdatePreviewToNextEquipment();
+        // }
     }
 
     private void HandlePreviewPositioning()

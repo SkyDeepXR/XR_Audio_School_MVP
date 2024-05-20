@@ -13,7 +13,7 @@ public class SnapObject : MonoBehaviour
 
     [SerializeField] private ConnectorType _connectorType;
     public ConnectorType connectorType => _connectorType;
-    [SerializeField] private InteractableUnityEventWrapper _interactableUnityEventWrapper;
+    //[SerializeField] private InteractableUnityEventWrapper _interactableUnityEventWrapper;
     
     
     //Reference the snap zone collider trigger
@@ -26,20 +26,20 @@ public class SnapObject : MonoBehaviour
     private bool _grabbed;
     public bool grabbed => _grabbed;
 
-    void Awake()
-    {
-        if (_interactableUnityEventWrapper == null)
-            _interactableUnityEventWrapper = gameObject.AddComponent<InteractableUnityEventWrapper>();
-        
-        _interactableUnityEventWrapper.WhenSelect.AddListener(() =>
-        {
-            _grabbed = true;
-        });
-        _interactableUnityEventWrapper.WhenUnselect.AddListener(() =>
-        {
-            _grabbed = false;
-        });
-    }
+    // void Awake()
+    // {
+    //     if (_interactableUnityEventWrapper == null)
+    //         _interactableUnityEventWrapper = gameObject.AddComponent<InteractableUnityEventWrapper>();
+    //     
+    //     _interactableUnityEventWrapper.WhenSelect.AddListener(() =>
+    //     {
+    //         _grabbed = true;
+    //     });
+    //     _interactableUnityEventWrapper.WhenUnselect.AddListener(() =>
+    //     {
+    //         _grabbed = false;
+    //     });
+    // }
     
     // Update is called once per frame
     void Update()

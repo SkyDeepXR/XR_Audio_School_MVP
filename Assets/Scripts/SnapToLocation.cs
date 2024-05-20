@@ -75,6 +75,9 @@ public class SnapToLocation : MonoBehaviour
     }
     private void Update()
     {
+        if (connector == null)
+            return;
+        
         // Set grabbed to equal the boolean value "isGrabbed" from OVRGrabbable script
         //_grabbed = connector.GetComponent<OVRGrabbable>().isGrabbed; // check for different script
         if (snapped)
