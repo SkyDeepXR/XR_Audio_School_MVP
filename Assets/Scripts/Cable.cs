@@ -1,8 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using NaughtyAttributes;
 using Oculus.Interaction;
-using Sirenix.OdinInspector;
 using UnityEngine;
 
 public class Cable : MonoBehaviour
