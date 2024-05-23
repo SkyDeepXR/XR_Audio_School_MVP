@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/NewControllerInteractionTests.unity
+    path: Assets/Scenes/SkyScenes/NewControllerInteractionTests.unity
     guid: f8ddca0e980bf2b4192b1d0ba911386a
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: efe419ce36704ee40a4d64544df617ca,
