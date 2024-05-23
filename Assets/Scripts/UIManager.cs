@@ -1,6 +1,6 @@
 using System.Collections;
 using DG.Tweening;
-using Sirenix.OdinInspector;
+using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.UI; // Ensure this is added to handle UI components directly
