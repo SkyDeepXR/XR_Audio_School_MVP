@@ -8,7 +8,9 @@ public class EquipmentSpawner : MonoBehaviour
 {
     private Camera mainCamera;
     [SerializeField] private Vector3 spawnOffsetFromCamera;
-    
+
+    [Space] 
+    [SerializeField] private TaskManager_1B taskManager;
     [SerializeField] private List<GameObject> equipmentsToSpawn;
 
     private int noOfEquipmentsPlaced;
@@ -37,6 +39,7 @@ public class EquipmentSpawner : MonoBehaviour
     {
         if (OVRInput.GetDown(OVRInput.Button.One) && noOfEquipmentsPlaced < equipmentsToSpawn.Count)
         {
+            taskManager.CompleteTask(noOfEquipmentsPlaced);
             noOfEquipmentsPlaced++;
             SpawnEquipment(noOfEquipmentsPlaced);
         }
@@ -50,6 +53,7 @@ public class EquipmentSpawner : MonoBehaviour
         var currentEquipmentToSpawn = equipmentsToSpawn[index];
         
         currentEquipmentToSpawn.SetActive(true);
+        currentEquipmentToSpawn.transform.parent = null;    // unlink to ResetCanvasPosition.cs
 
         currentEquipmentToSpawn.transform.position = mainCamera.transform.position +
                                                      mainCamera.transform.right * spawnOffsetFromCamera.x +
