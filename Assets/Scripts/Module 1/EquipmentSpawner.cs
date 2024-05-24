@@ -28,6 +28,11 @@ public class EquipmentSpawner : MonoBehaviour
         Invoke(nameof(Reset), 0.5f);
     }
 
+    private void OnEnable()
+    {
+        Debug.Log("OnEnable");
+    }
+
     private void Update()
     {
         if (OVRInput.GetDown(OVRInput.Button.One) && noOfEquipmentsPlaced < equipmentsToSpawn.Count)
