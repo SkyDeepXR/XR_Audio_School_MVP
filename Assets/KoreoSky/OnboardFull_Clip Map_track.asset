@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1223223985, guid: aa81bbec85a3f423193272a7c6154986, type: 3}
+  m_Name: OnboardFull_Clip Map_track
+  m_EditorClassIdentifier: 
+  mEventID: OnboardFull_ClipMap
+  mEventList:
+  - mStartSample: 286650
+    mEndSample: 507150
+  - mStartSample: 573300
+    mEndSample: 2293200
+  - mStartSample: 2370004
+    mEndSample: 3818360
+  - mStartSample: 3902850
+    mEndSample: 4542300
+  - mStartSample: 4604236
+    mEndSample: 5402250
+  - mStartSample: 5467644
+    mEndSample: 5622708
+  - mStartSample: 5771948
+    mEndSample: 6151950
+  _SerializedPayloadTypes:
+  - SonicBloom.Koreo.TextPayload
+  _AssetPayloads: []
+  _AssetPayloadIdxs: 
+  _ColorPayloads: []
+  _ColorPayloadIdxs: 
+  _CurvePayloads: []
+  _CurvePayloadIdxs: 
+  _FloatPayloads: []
+  _FloatPayloadIdxs: 
+  _GradientPayloads: []
+  _GradientPayloadIdxs: 
+  _IntPayloads: []
+  _IntPayloadIdxs: 
+  _SpectrumPayloads: []
+  _SpectrumPayloadIdxs: 
+  _TextPayloads:
+  - mTextVal: WelcomeSection
+  - mTextVal: WhatThisIsSection
+  - mTextVal: OptionsSection
+  - mTextVal: ControlsSection
+  - mTextVal: SpaceSection
+  - mTextVal: PressButton1
+  - mTextVal: DontPress
+  _TextPayloadIdxs: 00000000010000000200000003000000040000000500000006000000

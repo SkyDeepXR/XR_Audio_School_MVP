@@ -18,7 +18,7 @@ namespace SonicBloom.Koreo.Demos
 		void Start()
 		{
 			// Register for Koreography Events.  This sets up the callback.
-			Koreographer.Instance.RegisterForEventsWithTime(eventID, AdjustScale);
+			//Koreographer.Instance.RegisterForEventsWithTime(eventID, AdjustScale);
 		}
 		
 		void OnDestroy()
