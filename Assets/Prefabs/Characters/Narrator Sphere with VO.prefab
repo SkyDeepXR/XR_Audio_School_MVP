@@ -63,6 +63,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 567365946669653382}
+  - component: {fileID: 7092880342779816253}
+  - component: {fileID: 1571185508981485689}
   m_Layer: 0
   m_Name: Narrator Sphere with VO
   m_TagString: Untagged
@@ -91,6 +93,39 @@ Transform:
   - {fileID: 4942856071025542103}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7092880342779816253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5306414182238547488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68aeb7ddcb6da664e8a2bcd739bc1e5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerHead: {fileID: 0}
+  offset: {x: -0.5, y: 0.02, z: 0.5}
+  smoothSpeed: 0.125
+  noiseScale: 0.5
+  noiseFrequency: 0.31
+  gazeThreshold: 15
+  minDistance: 1
+--- !u!114 &1571185508981485689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5306414182238547488}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96550111ae0e96b48beb4b05063c21bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lessonPosition: {fileID: 0}
+  moveDuration: 1
 --- !u!1 &6850154042458734974
 GameObject:
   m_ObjectHideFlags: 0
