@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-public class TaskManager_1B : MonoBehaviour
+public class TaskManager : MonoBehaviour
 {
     [SerializeField] private List<TaskItem> taskItems;
 
@@ -19,6 +19,11 @@ public class TaskManager_1B : MonoBehaviour
         {
             OnAllTasksCompleted?.Invoke();
         }
+    }
+
+    public void ResetTask(int index)
+    {
+        taskItems[index].ResetTask();
     }
 
     private bool CheckIfAllTasksAreCompleted()
