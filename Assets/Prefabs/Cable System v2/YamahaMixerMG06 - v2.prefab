@@ -1679,6 +1679,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 935352733812408204}
+  - component: {fileID: 1258456581925059165}
   - component: {fileID: 8365397405580552923}
   - component: {fileID: 641510888811019278}
   - component: {fileID: 7861568991345149074}
@@ -1697,7 +1698,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4965152461557583322}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.022, y: 0.967, z: 0.26}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1712,6 +1713,30 @@ Transform:
   - {fileID: 4312598318592063430}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1258456581925059165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4965152461557583322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11abb4201656d0248843129d434aabe4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  micSocket: {fileID: 5381127164811627718}
+  speakerSocketL: {fileID: 5699819826374267677}
+  speakerSocketR: {fileID: 4009217072467309769}
+  micSocketEventWrapper: {fileID: 8482290741133897268}
+  speakerSocketLEventWrapper: {fileID: 8159825340436332750}
+  speakerSocketREventWrapper: {fileID: 4277327489115155540}
+  micCableEnd: {fileID: 0}
+  speakerLCableEnd: {fileID: 0}
+  speakerRCableEnd: {fileID: 0}
+  connectedMicSocket: {fileID: 0}
+  connectedSpeakerSocketL: {fileID: 0}
+  connectedSpeakerSocketR: {fileID: 0}
 --- !u!54 &8365397405580552923
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3624,6 +3649,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2375820835475906256, guid: 94d61cfbb6f631f4c877a5827f6b7d26,
+        type: 3}
+      propertyPath: m_Name
+      value: Snap Interactable (Mic)
+      objectReference: {fileID: 0}
     - target: {fileID: 6858629140231976858, guid: 94d61cfbb6f631f4c877a5827f6b7d26,
         type: 3}
       propertyPath: m_Name
@@ -3632,14 +3662,89 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2375820835475906256, guid: 94d61cfbb6f631f4c877a5827f6b7d26,
+        type: 3}
+      insertIndex: 1
+      addedObject: {fileID: 230419729990277220}
+    - targetCorrespondingSourceObject: {fileID: 2375820835475906256, guid: 94d61cfbb6f631f4c877a5827f6b7d26,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8482290741133897268}
   m_SourcePrefab: {fileID: 100100000, guid: 94d61cfbb6f631f4c877a5827f6b7d26, type: 3}
+--- !u!1 &125019057163962246 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2375820835475906256, guid: 94d61cfbb6f631f4c877a5827f6b7d26,
+    type: 3}
+  m_PrefabInstance: {fileID: 2397239216832174422}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &230419729990277220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 125019057163962246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 019d04dc04806624692ba6e7b239363f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8482290741133897268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 125019057163962246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1464721f2283eb14e94a33e812b47be4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _interactableView: {fileID: 5381127164811627718}
+  _whenHover:
+    m_PersistentCalls:
+      m_Calls: []
+  _whenUnhover:
+    m_PersistentCalls:
+      m_Calls: []
+  _whenSelect:
+    m_PersistentCalls:
+      m_Calls: []
+  _whenUnselect:
+    m_PersistentCalls:
+      m_Calls: []
+  _whenInteractorViewAdded:
+    m_PersistentCalls:
+      m_Calls: []
+  _whenInteractorViewRemoved:
+    m_PersistentCalls:
+      m_Calls: []
+  _whenSelectingInteractorViewAdded:
+    m_PersistentCalls:
+      m_Calls: []
+  _whenSelectingInteractorViewRemoved:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &4312598318592063430 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1917927677164695184, guid: 94d61cfbb6f631f4c877a5827f6b7d26,
     type: 3}
   m_PrefabInstance: {fileID: 2397239216832174422}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &5381127164811627718 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7775797876552603024, guid: 94d61cfbb6f631f4c877a5827f6b7d26,
+    type: 3}
+  m_PrefabInstance: {fileID: 2397239216832174422}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 125019057163962246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06bd28341d3e86a4c8ab52b1a0269c7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2661905652450051725
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3698,6 +3803,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2375820835475906256, guid: 5143791016341f948b64dfddab6a630d,
+        type: 3}
+      propertyPath: m_Name
+      value: Snap Interactable (Speaker L)
+      objectReference: {fileID: 0}
     - target: {fileID: 2579591794845882752, guid: 5143791016341f948b64dfddab6a630d,
         type: 3}
       propertyPath: m_LocalRotation.w
@@ -3721,14 +3831,89 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2375820835475906256, guid: 5143791016341f948b64dfddab6a630d,
+        type: 3}
+      insertIndex: 1
+      addedObject: {fileID: 8735623998013210660}
+    - targetCorrespondingSourceObject: {fileID: 2375820835475906256, guid: 5143791016341f948b64dfddab6a630d,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8159825340436332750}
   m_SourcePrefab: {fileID: 100100000, guid: 5143791016341f948b64dfddab6a630d, type: 3}
+--- !u!1 &290589241772120157 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2375820835475906256, guid: 5143791016341f948b64dfddab6a630d,
+    type: 3}
+  m_PrefabInstance: {fileID: 2661905652450051725}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8735623998013210660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 290589241772120157}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e9be801073b64e43b47857ec5000ad7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8159825340436332750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 290589241772120157}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1464721f2283eb14e94a33e812b47be4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _interactableView: {fileID: 5699819826374267677}
+  _whenHover:
+    m_PersistentCalls:
+      m_Calls: []
+  _whenUnhover:
+    m_PersistentCalls:
+      m_Calls: []
+  _whenSelect:
+    m_PersistentCalls:
+      m_Calls: []
+  _whenUnselect:
+    m_PersistentCalls:
+      m_Calls: []
+  _whenInteractorViewAdded:
+    m_PersistentCalls:
+      m_Calls: []
+  _whenInteractorViewRemoved:
+    m_PersistentCalls:
+      m_Calls: []
+  _whenSelectingInteractorViewAdded:
+    m_PersistentCalls:
+      m_Calls: []
+  _whenSelectingInteractorViewRemoved:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &4498291296525969437 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1917927677164695184, guid: 5143791016341f948b64dfddab6a630d,
     type: 3}
   m_PrefabInstance: {fileID: 2661905652450051725}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &5699819826374267677 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7775797876552603024, guid: 5143791016341f948b64dfddab6a630d,
+    type: 3}
+  m_PrefabInstance: {fileID: 2661905652450051725}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 290589241772120157}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06bd28341d3e86a4c8ab52b1a0269c7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &6650329384106320217
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3787,6 +3972,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2375820835475906256, guid: 5143791016341f948b64dfddab6a630d,
+        type: 3}
+      propertyPath: m_Name
+      value: Snap Interactable (Speaker R)
+      objectReference: {fileID: 0}
     - target: {fileID: 2579591794845882752, guid: 5143791016341f948b64dfddab6a630d,
         type: 3}
       propertyPath: m_LocalRotation.w
@@ -3810,11 +4000,86 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2375820835475906256, guid: 5143791016341f948b64dfddab6a630d,
+        type: 3}
+      insertIndex: 1
+      addedObject: {fileID: 2622394307968251021}
+    - targetCorrespondingSourceObject: {fileID: 2375820835475906256, guid: 5143791016341f948b64dfddab6a630d,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4277327489115155540}
   m_SourcePrefab: {fileID: 100100000, guid: 5143791016341f948b64dfddab6a630d, type: 3}
+--- !u!114 &4009217072467309769 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7775797876552603024, guid: 5143791016341f948b64dfddab6a630d,
+    type: 3}
+  m_PrefabInstance: {fileID: 6650329384106320217}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8985291628742492041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06bd28341d3e86a4c8ab52b1a0269c7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &5104670029244616649 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1917927677164695184, guid: 5143791016341f948b64dfddab6a630d,
     type: 3}
   m_PrefabInstance: {fileID: 6650329384106320217}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &8985291628742492041 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2375820835475906256, guid: 5143791016341f948b64dfddab6a630d,
+    type: 3}
+  m_PrefabInstance: {fileID: 6650329384106320217}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2622394307968251021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8985291628742492041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e9be801073b64e43b47857ec5000ad7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4277327489115155540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8985291628742492041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1464721f2283eb14e94a33e812b47be4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _interactableView: {fileID: 4009217072467309769}
+  _whenHover:
+    m_PersistentCalls:
+      m_Calls: []
+  _whenUnhover:
+    m_PersistentCalls:
+      m_Calls: []
+  _whenSelect:
+    m_PersistentCalls:
+      m_Calls: []
+  _whenUnselect:
+    m_PersistentCalls:
+      m_Calls: []
+  _whenInteractorViewAdded:
+    m_PersistentCalls:
+      m_Calls: []
+  _whenInteractorViewRemoved:
+    m_PersistentCalls:
+      m_Calls: []
+  _whenSelectingInteractorViewAdded:
+    m_PersistentCalls:
+      m_Calls: []
+  _whenSelectingInteractorViewRemoved:
+    m_PersistentCalls:
+      m_Calls: []

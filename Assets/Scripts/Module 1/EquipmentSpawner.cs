@@ -10,7 +10,7 @@ public class EquipmentSpawner : MonoBehaviour
     [SerializeField] private Vector3 spawnOffsetFromCamera;
 
     [Space] 
-    [SerializeField] private TaskManager_1B taskManager;
+    [SerializeField] private TaskManager taskManager;
     [SerializeField] private List<GameObject> equipmentsToSpawn;
 
     private int noOfEquipmentsPlaced;

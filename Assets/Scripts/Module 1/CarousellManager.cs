@@ -14,8 +14,7 @@ public class CarousellManager : MonoBehaviour
     
     [SerializeField] private List<GameObject> carousellObjects;
     
-    // Start is called before the first frame update
-    void Start()
+    void OnEnable()
     {
         InitializeCarousellObjects();
     }
