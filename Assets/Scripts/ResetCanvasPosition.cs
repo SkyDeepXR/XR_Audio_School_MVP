@@ -17,9 +17,10 @@ public class ResetCanvasPosition : MonoBehaviour
     private IEnumerator Start()
     {
         // Wait for a short delay before setting the canvas position
-        yield return new WaitForSeconds(1.0f);  // Delay for 1 second, adjust as needed
+        yield return new WaitForSeconds(0.1f);  // Delay for 1 second, adjust as needed
         ResetCanvas();
     }
+    
 
     void Update()
     {
