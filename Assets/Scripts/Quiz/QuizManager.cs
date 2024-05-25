@@ -31,10 +31,10 @@ public class QuizManager : MonoBehaviour
         retryButton.onClick.AddListener(ResetQuiz);
     }
     
-    // private void Start()
-    // {
-    //     ResetQuiz();
-    // }
+    private void Start()
+    {
+        ResetQuiz();
+    }
 
     private void OnEnable()
     {
