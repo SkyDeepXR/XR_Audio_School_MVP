@@ -89,10 +89,6 @@ public class Mixer : MonoBehaviour
 
     void Update()
     {
-        // connectedMicSocket = micCableEnd? micCableEnd.FindConnectingSnapInteractor() : null;
-        // connectedSpeakerSocketL = speakerLCableEnd? speakerLCableEnd.FindConnectingSnapInteractor() : null;
-        // connectedSpeakerSocketR = speakerRCableEnd? speakerRCableEnd.FindConnectingSnapInteractor() : null;
-        
         UpdateMicConnectionStatus();
         UpdateSpeakerLConnectionStatus();
         UpdateSpeakerRConnectionStatus();
@@ -111,7 +107,6 @@ public class Mixer : MonoBehaviour
         else
             onMicDisconnected?.Invoke();    
         micConnected = micConnectedNew;
-        Debug.Log("Mic Connected: " + micConnected);
     }
     
     private void UpdateSpeakerLConnectionStatus()
@@ -127,7 +122,6 @@ public class Mixer : MonoBehaviour
         else
             onSpeakerLDisconnected?.Invoke();    
         speakerLConnected = speakerLConnectedNew;
-        Debug.Log("Speaker L Connected: " + speakerLConnected);
     }
     
     private void UpdateSpeakerRConnectionStatus()
@@ -143,6 +137,5 @@ public class Mixer : MonoBehaviour
         else
             onSpeakerRDisconnected?.Invoke();    
         speakerRConnected = speakerRConnectedNew;
-        Debug.Log("Speaker R Connected: " + speakerRConnected);
     }
 }
