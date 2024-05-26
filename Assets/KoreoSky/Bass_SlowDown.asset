@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: -2076007791, guid: aa81bbec85a3f423193272a7c6154986, type: 3}
   m_Name: Bass_SlowDown
   m_EditorClassIdentifier: 
-  mSourceClip: {fileID: 8300000, guid: dd521e5b8d5ce0a479419b7e8ab2edcb, type: 3}
+  mSourceClip: {fileID: 8300000, guid: 07a91c53e254f4b4ca146647d5a63684, type: 3}
   mAudioFilePath: 
   mSampleRate: 48000
   mIgnoreLatencyOffset: 0
