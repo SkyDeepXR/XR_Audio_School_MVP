@@ -10,6 +10,7 @@ public class MainMenuUI : MonoBehaviour
     [SerializeField] private CanvasGroup splashScreen;
 
     [Header("Lesson")]
+    [SerializeField] private ModuleManager moduleManager;
     [SerializeField] private List<GameObject> moduleGroupList = new(); 
     
     [Header("DEBUG")]
@@ -22,11 +23,7 @@ public class MainMenuUI : MonoBehaviour
         
         Invoke(nameof(GoToNextPage), 3f);
         
-        // disable all modules
-        foreach (var moduleGroup in moduleGroupList)
-        {
-            moduleGroup.SetActive(false);
-        }
+        
     }
     
 
@@ -69,10 +66,7 @@ public class MainMenuUI : MonoBehaviour
     {
         gameObject.SetActive(false);
 
-        for (int i = 0; i < moduleGroupList.Count; i++)
-        {
-            moduleGroupList[i].SetActive(i == moduleIndex);
-        }
+        moduleManager.StartModule(moduleIndex);
     }
     
 }

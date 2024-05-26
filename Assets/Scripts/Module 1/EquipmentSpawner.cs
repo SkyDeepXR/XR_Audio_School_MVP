@@ -11,6 +11,7 @@ public class EquipmentSpawner : MonoBehaviour
 
     [Space] 
     [SerializeField] private TaskManager taskManager;
+    [SerializeField] private Transform equipmentsParent;
     [SerializeField] private List<GameObject> equipmentsToSpawn;
 
     private int noOfEquipmentsPlaced;
@@ -33,6 +34,11 @@ public class EquipmentSpawner : MonoBehaviour
     private void OnEnable()
     {
         Debug.Log("OnEnable");
+    }
+
+    private void OnDisable()
+    {
+        ResetEquipmentParent();
     }
 
     private void Update()
@@ -80,5 +86,13 @@ public class EquipmentSpawner : MonoBehaviour
         noOfEquipmentsPlaced = 0;
         
         SpawnEquipment(0);
+    }
+
+    private void ResetEquipmentParent()
+    {
+        foreach (var equipment in equipmentsToSpawn)
+        {
+            equipment.SetActive(false);
+        }
     }
 }
