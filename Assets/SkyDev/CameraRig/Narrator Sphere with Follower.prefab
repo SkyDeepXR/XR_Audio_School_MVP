@@ -119,7 +119,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _sourceModule01: {fileID: 1831100812267781522}
-  _clipsModule01: []
+  _clipsModule01:
+  - {fileID: 8300000, guid: ecc4ef95f265b414dab0de7184c4e846, type: 3}
+  - {fileID: 8300000, guid: 9d3a662a645697b418000e188ffa2fbc, type: 3}
+  - {fileID: 8300000, guid: d99b7179b5c00ef4a8a4f2950903a3a1, type: 3}
+  - {fileID: 8300000, guid: ca493ff1941f2d842a7c071fd3c77133, type: 3}
+  - {fileID: 8300000, guid: 2bceb41bcbf2c7d429d0b04fd57881dd, type: 3}
+  - {fileID: 8300000, guid: ed3eed66a46a24246a0d24239b9461ab, type: 3}
+  - {fileID: 8300000, guid: 409dbe81168658c48be4c62d9610624f, type: 3}
+  - {fileID: 8300000, guid: 5c6b762a7674e2646860d833f8d474cd, type: 3}
+  - {fileID: 8300000, guid: da76e78e50c5e1641b81b44432d5b2a0, type: 3}
+  - {fileID: 8300000, guid: 3e2f2ce56da3d364892d5c992186367d, type: 3}
+  - {fileID: 8300000, guid: 4022f2c698561a44c87843db925ba6ce, type: 3}
+  - {fileID: 8300000, guid: ee390165fe300e841aa967671f405559, type: 3}
 --- !u!1 &4328898339385326864
 GameObject:
   m_ObjectHideFlags: 0
@@ -166,15 +178,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _sourceModule01: {fileID: 1831100812267781522}
   _clipsModule01:
-  - {fileID: 8300000, guid: 60ed2e9108f87214b89ccf574a94a82f, type: 3}
-  - {fileID: 8300000, guid: dc7bfde04b4afdc438035cf55c381635, type: 3}
-  - {fileID: 8300000, guid: 7109e82467fa6fe45b970b7057031c58, type: 3}
-  - {fileID: 8300000, guid: 817085a74ea66554b9a59dc9a95b0c6f, type: 3}
-  - {fileID: 8300000, guid: 974ee36cf36427046b79d4c1e8d17235, type: 3}
-  - {fileID: 8300000, guid: 68e6798d101975446a885a6443b3a572, type: 3}
-  - {fileID: 8300000, guid: 2bc6835573b37ea409e33e07c1c8b961, type: 3}
-  - {fileID: 8300000, guid: 1179cbf5a32000b43a2399e1ce4361df, type: 3}
-  - {fileID: 8300000, guid: a0f006580ea7b774cb11823651b01b27, type: 3}
+  - {fileID: 8300000, guid: ec5d508532404e24aa321841e00ddc03, type: 3}
+  - {fileID: 8300000, guid: 55e91d3fb16a2eb41a3c91f9f2051724, type: 3}
+  - {fileID: 8300000, guid: 3fd5afc3bd4d67c4ea3e60245086ac24, type: 3}
+  - {fileID: 8300000, guid: d45b7bdfc905a52438498e39c97b0265, type: 3}
+  - {fileID: 8300000, guid: 1e3ffe64077d9c84f97d958fda3a5952, type: 3}
+  - {fileID: 8300000, guid: febe171fb221c134fa87f9f6ec35238d, type: 3}
+  - {fileID: 8300000, guid: 9a6df8a8abeef8244b488c7272867832, type: 3}
+  - {fileID: 8300000, guid: c2a3ba7014e03c9448757540f05cf236, type: 3}
+  - {fileID: 8300000, guid: 1a524d8e3b18e554091685672622f28d, type: 3}
+  - {fileID: 8300000, guid: 5d81722771e43d347bd1b9caed04d8f4, type: 3}
   - {fileID: 8300000, guid: adcbfa9976c4c564fb9ef21dea236fa5, type: 3}
   - {fileID: 8300000, guid: 50001386311ff5442b618560ac903d88, type: 3}
   - {fileID: 8300000, guid: 8f5c7f46eb496e14395cba550a10642f, type: 3}
@@ -223,7 +236,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _sourceModule01: {fileID: 1831100812267781522}
-  _clipsModule01: []
+  _clipsModule01:
+  - {fileID: 8300000, guid: 8571d73b3032c484d8f50681986d6b42, type: 3}
+  - {fileID: 8300000, guid: f7fb1866773848b408ab386b1634436a, type: 3}
+  - {fileID: 8300000, guid: d7e56c245732fcf47ac2ecb9c7956988, type: 3}
+  - {fileID: 8300000, guid: da76e78e50c5e1641b81b44432d5b2a0, type: 3}
 --- !u!1 &6019227644923422667
 GameObject:
   m_ObjectHideFlags: 0
@@ -270,11 +287,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _onboardSource: {fileID: 1831100812267781522}
   _onboardClips:
-  - {fileID: 8300000, guid: 9e8fc06d009c12e4cbfaf7b9eacfbd79, type: 3}
-  - {fileID: 8300000, guid: 69dceb2595e7981469c50a868154c890, type: 3}
-  - {fileID: 8300000, guid: 0043b1f250f2a584994c77d0c546131b, type: 3}
-  - {fileID: 8300000, guid: 936d11780b1ad4748ad1bac5f73212c9, type: 3}
-  - {fileID: 8300000, guid: 4c5880f777b56be4caa5544dcaed205f, type: 3}
+  - {fileID: 8300000, guid: dd8e3b5721d29e44bbff8b00530eb617, type: 3}
+  - {fileID: 8300000, guid: 2d1b573a3f34e9a42a4fefb671e93708, type: 3}
+  - {fileID: 8300000, guid: 894d6944b57d2744fa75864e234129a9, type: 3}
+  - {fileID: 8300000, guid: 2bdbca54f11633a4390a3c9b98a7c946, type: 3}
+  - {fileID: 8300000, guid: a290656cce19fec47ad9eb90c2ac4834, type: 3}
   _pressButtonVO:
   - {fileID: 8300000, guid: 7a948e7c5372b6d4f94dc527def757ad, type: 3}
   - {fileID: 8300000, guid: f80c6d9c66789f34cb73237125e21f86, type: 3}
@@ -612,6 +629,14 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 6704224078292847769}
+    - targetCorrespondingSourceObject: {fileID: -5117700066308340382, guid: 5ef480a5816dd7d45ade8b26cd67b882,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1050186125211429987}
+    - targetCorrespondingSourceObject: {fileID: -5117700066308340382, guid: 5ef480a5816dd7d45ade8b26cd67b882,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8768345544221675323}
     - targetCorrespondingSourceObject: {fileID: 6507901977716847365, guid: 5ef480a5816dd7d45ade8b26cd67b882,
         type: 3}
       insertIndex: -1
@@ -673,7 +698,7 @@ AudioSource:
   m_Pitch: 1
   Loop: 0
   Mute: 0
-  Spatialize: 0
+  Spatialize: 1
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
@@ -794,6 +819,41 @@ MonoBehaviour:
   _red: 0.4
   _green: 0.4
   _blue: 1
+--- !u!114 &1050186125211429987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2838530766552798246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a07f270ac36c49789466c75ceb88424c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enableSpatialization: 1
+  gainBoostDb: 0
+  enableAcoustics: 1
+  reverbSendDb: -13
+--- !u!114 &8768345544221675323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2838530766552798246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 796f04c5a94947649c2235acef0008ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hrtfIntensity: 1
+  volumetricRadius: 0
+  earlyReflectionsSendDb: 3.3
+  reverbReach: 0.51
+  directivityIntensity: 1
+  directivityPattern: 0
+  directSoundEnabled: 1
 --- !u!1 &5030111802726851137 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6507901977716847365, guid: 5ef480a5816dd7d45ade8b26cd67b882,

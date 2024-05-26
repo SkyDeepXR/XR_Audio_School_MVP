@@ -26,8 +26,11 @@ public class VolumeFaderMixer : MonoBehaviour
     [Header("Mixer Group Volume Parameters")]
     public string[] volumeParameters; // Names of exposed volume parameters
 
+    
+    public MultiMusicPlayer multiMusicPlayer;
+    
     private int channelCount;
-
+    
     void Start()
     {
         channelCount = volumeFaders.Length;
@@ -37,28 +40,54 @@ public class VolumeFaderMixer : MonoBehaviour
     {
         for (int i = 0; i < channelCount; i++)
         {
-            UpdateVolumeFader(volumeFaders[i], volumeParameters[i]);
+            UpdateVolumeFader(i);
         }
-        UpdateMasterVolumeFader(masterFaderLeft, "MasterVolumeLeft");
-        UpdateMasterVolumeFader(masterFaderRight, "MasterVolumeRight");
     }
 
-    void UpdateVolumeFader(Fader fader, string parameterName)
+    void UpdateVolumeFader(int index)
     {
-        float faderValue = Mathf.InverseLerp(fader.minY, fader.maxY, fader.faderTransform.localPosition.y);
-        SetVolume(parameterName, faderValue);
+        float faderValue = Mathf.InverseLerp(volumeFaders[index].minY, volumeFaders[index].maxY, volumeFaders[index].faderTransform.localPosition.y);
+        Debug.Log($"Fader {volumeFaders[index].faderTransform.name} - Value: {faderValue}");
+        SetVolume(index, faderValue);
     }
 
-    void UpdateMasterVolumeFader(Fader fader, string paramName)
+    void SetVolume(int layer, float value)
     {
-        float faderValue = Mathf.InverseLerp(fader.minY, fader.maxY, fader.faderTransform.localPosition.y);
-        SetVolume(paramName, faderValue);
+        multiMusicPlayer.SetVolumeForLayer(layer, value);
+        Debug.Log($"Set volume for layer {layer} to {value}");
     }
-
-    void SetVolume(string parameterName, float value)
-    {
-        float dbValue = Mathf.Lerp(-80f, 0f, value); // Convert to decibels for the AudioMixer
-        audioMixer.SetFloat(parameterName, dbValue);
-        Debug.Log($"Set volume for {parameterName} to {dbValue} dB");
-    }
+    
+    // void Start()
+    // {
+    //     channelCount = volumeFaders.Length;
+    // }
+    //
+    // void Update()
+    // {
+    //     for (int i = 0; i < channelCount; i++)
+    //     {
+    //         UpdateVolumeFader(volumeFaders[i], volumeParameters[i]);
+    //     }
+    //     UpdateMasterVolumeFader(masterFaderLeft, "MasterVolumeLeft");
+    //     UpdateMasterVolumeFader(masterFaderRight, "MasterVolumeRight");
+    // }
+    //
+    // void UpdateVolumeFader(Fader fader, string parameterName)
+    // {
+    //     float faderValue = Mathf.InverseLerp(fader.minY, fader.maxY, fader.faderTransform.localPosition.y);
+    //     SetVolume(parameterName, faderValue);
+    // }
+    //
+    // void UpdateMasterVolumeFader(Fader fader, string paramName)
+    // {
+    //     float faderValue = Mathf.InverseLerp(fader.minY, fader.maxY, fader.faderTransform.localPosition.y);
+    //     SetVolume(paramName, faderValue);
+    // }
+    //
+    // void SetVolume(string parameterName, float value)
+    // {
+    //     float dbValue = Mathf.Lerp(-80f, 0f, value); // Convert to decibels for the AudioMixer
+    //     audioMixer.SetFloat(parameterName, dbValue);
+    //     Debug.Log($"Set volume for {parameterName} to {dbValue} dB");
+    // }
 }
