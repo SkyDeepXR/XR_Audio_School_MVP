@@ -25,7 +25,10 @@ public class MainMenuUI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
         ShowPage(0);
+        
+        _onboardAudio.PlayBGM();  // play BGM but need logic to fade out music at the end of onboarding.
         
         //Invoke(nameof(GoToNextPage), 3f);
     }
@@ -74,6 +77,10 @@ public class MainMenuUI : MonoBehaviour
         {
             var uiPage = uiPages[i];
             bool isCurrentPage = i == currentPageIndex;
+            if (uiPage== null)
+            {
+                continue;
+            }
             uiPage.alpha = isCurrentPage ? 1 : 0;
             uiPage.interactable = isCurrentPage;
             uiPage.blocksRaycasts = isCurrentPage;
@@ -86,7 +93,7 @@ public class MainMenuUI : MonoBehaviour
     public void GoToModuleAndCloseMainMenu(int moduleIndex)
     {
         gameObject.SetActive(false);
-
+        _onboardAudio.StopBGM(); //stop backround music
         moduleManager.StartModule(moduleIndex);
     }
     

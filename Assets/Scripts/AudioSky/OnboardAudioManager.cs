@@ -7,9 +7,13 @@ using DG.Tweening;
 public class OnboardAudioManager : MonoBehaviour
 {
     public static OnboardAudioManager instance;
-    
+
     [Header("VOICEOVER")]
     // Dedicated AudioSource for voiceover
+
+    [SerializeField] private AudioSource _bgmSource;
+    [SerializeField] private AudioClip _bgMusic;
+    
     [SerializeField] private AudioSource _onboardSource;
     [SerializeField] AudioClip[] _onboardClips;  // Audio clips for Onboarding Voiceover
     [SerializeField] private NarrationAudioEvent[] _narrationAudioEvents;
@@ -38,7 +42,16 @@ public class OnboardAudioManager : MonoBehaviour
 
             
         StartCoroutine(PlayNarrationClipCoroutine(clipIndex, onAudioEndCallback));
+    }
 
+    public void PlayBGM()
+    {
+        _bgmSource.PlayOneShot(_bgMusic, 5f);
+    }
+    
+    public void StopBGM()
+    {
+        _bgmSource.Stop();
     }
 
     // private void PlayClipImmediately(int clipIndex)
