@@ -12,12 +12,11 @@ public class OnboardAudioManager : MonoBehaviour
     // Dedicated AudioSource for voiceover
     [SerializeField] private AudioSource _onboardSource;
     [SerializeField] AudioClip[] _onboardClips;  // Audio clips for Onboarding Voiceover
+    [SerializeField] private NarrationAudioEvent[] _narrationAudioEvents;
     [SerializeField] private AudioClip[] _pressButtonVO;
-    
-    
-    
-    
 
+    private bool _audioSkipped = true;
+    
     // Use this for initialization
     void Start()
     {
@@ -29,48 +28,75 @@ public class OnboardAudioManager : MonoBehaviour
     }
 
     
-    public void PlayNarrationClip(int clipIndex, float delay)  // Play narration clip according to their index number. Call this from an Event Manager.
+    public void PlayNarrationClip(int clipIndex, Action onAudioEndCallback = null)  // Play narration clip according to their index number. Call this from an Event Manager.
     {
-        if (clipIndex < 0 || clipIndex >= _onboardClips.Length)
+        if (clipIndex < 0 || clipIndex >= _narrationAudioEvents.Length)
         {
             Debug.LogError("Clip index out of range.");
             return;
         }
-        else
-        {
-            StartCoroutine(DelayedPlay(clipIndex, delay));
-        }
+
+            
+        StartCoroutine(PlayNarrationClipCoroutine(clipIndex, onAudioEndCallback));
+
     }
 
-    private void PlayClipImmediately(int clipIndex)
-    {
-        if (_onboardSource.isPlaying)
-        {
-            _onboardSource.Stop();
-        }
-
-        _onboardSource.PlayOneShot(_onboardClips[clipIndex]);
-        
-    }
+    // private void PlayClipImmediately(int clipIndex)
+    // {
+    //     if (_onboardSource.isPlaying)
+    //     {
+    //         _onboardSource.Stop();
+    //     }
+    //
+    //     _onboardSource.PlayOneShot(_onboardClips[clipIndex]);
+    //     
+    // }
     
     /// <summary>
     /// The following Coroutine is a very general delay options.  I would like to rewrite to allow more precise control of audio delays.
     /// </summary>
     /// <param name="clipIndex"></param>
     /// <returns></returns>
-    private IEnumerator DelayedPlay(int clipIndex, float delay)
+    private IEnumerator PlayNarrationClipCoroutine(int clipIndex, Action onAudioEndCallback = null)
     {
-        yield return new WaitForSeconds(delay);  // Wait for 0 seconds.  Can be changed later if delays are needed.
+        _audioSkipped = true;
+        
+        var narrationEvent = _narrationAudioEvents[clipIndex];
+        
+        yield return new WaitForSeconds(narrationEvent.preDelay);  // Wait for 0 seconds.  Can be changed later if delays are needed.
 
         if (_onboardSource.isPlaying)
         {
             _onboardSource.Stop();
         }
 
-        _onboardSource.PlayOneShot(_onboardClips[clipIndex]);
+        yield return null;
         
+        _onboardSource.PlayOneShot(narrationEvent.audioClip);
+        _audioSkipped = false;
+
+        while (_onboardSource.isPlaying)
+        {
+            if (_audioSkipped)  // skip remaining logic if replaced with another audio event call
+                yield break;
+
+            yield return null;
+        }
+        
+        yield return new WaitUntil(() => !_onboardSource.isPlaying);
+        yield return new WaitForSeconds(narrationEvent.postDelay);
+
+        onAudioEndCallback?.Invoke();
     }
 
     
 
+}
+
+[Serializable]
+public class NarrationAudioEvent
+{
+    public float preDelay;
+    public AudioClip audioClip;
+    public float postDelay;
 }

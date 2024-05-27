@@ -7,7 +7,6 @@ public class MainMenuUI : MonoBehaviour
 {
     [Header("UI")] 
     [SerializeField] private List<CanvasGroup> uiPages = new(); // put them in order
-    [SerializeField] private CanvasGroup splashScreen;
 
     [Header("Lesson")]
     [SerializeField] private ModuleManager moduleManager;
@@ -15,6 +14,7 @@ public class MainMenuUI : MonoBehaviour
     
     [Header("DEBUG")]
     [SerializeField] private CanvasGroup currentPage;
+    [SerializeField, ReadOnly] private int currentPageIndex;
 
     [Header("AUDIO MANAGERS")] 
     [SerializeField] private OnboardAudioManager _onboardAudio;
@@ -25,53 +25,62 @@ public class MainMenuUI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        ShowPage(splashScreen);
+        ShowPage(0);
         
         //Invoke(nameof(GoToNextPage), 3f);
-        
-        _onboardAudio.PlayNarrationClip(0,2f);
-        
+    }
+
+    void Update()
+    {
+        // button click for splash screen
+        if (currentPageIndex == 0 && OVRInput.GetDown(OVRInput.Button.One))
+        {
+            GoToNextPage();
+        }
     }
     
 
     [Button]
     public void GoToPreviousPage()
     {
-        int currentIndex = uiPages.IndexOf(currentPage);
-        int previousIndex = (currentIndex - 1);
+        int previousIndex = currentPageIndex;
+
+        do
+        {
+            previousIndex--;
+        } while (uiPages[previousIndex - 1] == null && previousIndex >= 0); // skip empty pages
+        
         if (previousIndex < 0)
             return;
         
-        ShowPage(uiPages[previousIndex]);
+        ShowPage(previousIndex);
     }
 
     [Button]
     public void GoToNextPage()
     {
-        int currentIndex = uiPages.IndexOf(currentPage);
-        int nextIndex = (currentIndex + 1) % uiPages.Count;
+        int nextIndex = currentPageIndex + 1;
         if (nextIndex >= uiPages.Count)
             return;
         
-        ShowPage(uiPages[nextIndex]);
+        ShowPage(nextIndex);
     }
     
-    public void ShowPage(CanvasGroup canvasGroupToShow)
+    public void ShowPage(int newPageIndex)
     {
-        currentPage = canvasGroupToShow;
-        int index = uiPages.IndexOf(currentPage);
-        
-        foreach (var uiPage in uiPages)
+        currentPageIndex = newPageIndex;
+
+        for (int i = 0; i < uiPages.Count; i++)
         {
-            bool isCurrentPage = uiPage == canvasGroupToShow;
+            var uiPage = uiPages[i];
+            bool isCurrentPage = i == currentPageIndex;
             uiPage.alpha = isCurrentPage ? 1 : 0;
             uiPage.interactable = isCurrentPage;
             uiPage.blocksRaycasts = isCurrentPage;
         }
         
-        _onboardAudio.PlayNarrationClip(1,.5f);
-        
-        
+        // index must match narration event index in OnboardAudioManager.cs
+        _onboardAudio.PlayNarrationClip(currentPageIndex, uiPages[currentPageIndex] == null ? GoToNextPage : null);
     }
 
     public void GoToModuleAndCloseMainMenu(int moduleIndex)
