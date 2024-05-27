@@ -15,14 +15,21 @@ public class MainMenuUI : MonoBehaviour
     
     [Header("DEBUG")]
     [SerializeField] private CanvasGroup currentPage;
+
+    [Header("AUDIO MANAGERS")] 
+    [SerializeField] private OnboardAudioManager _onboardAudio;
+    
+    
+    
     
     // Start is called before the first frame update
     void Start()
     {
         ShowPage(splashScreen);
         
-        Invoke(nameof(GoToNextPage), 3f);
+        //Invoke(nameof(GoToNextPage), 3f);
         
+        _onboardAudio.PlayNarrationClip(0,2f);
         
     }
     
@@ -52,6 +59,7 @@ public class MainMenuUI : MonoBehaviour
     public void ShowPage(CanvasGroup canvasGroupToShow)
     {
         currentPage = canvasGroupToShow;
+        int index = uiPages.IndexOf(currentPage);
         
         foreach (var uiPage in uiPages)
         {
@@ -60,6 +68,10 @@ public class MainMenuUI : MonoBehaviour
             uiPage.interactable = isCurrentPage;
             uiPage.blocksRaycasts = isCurrentPage;
         }
+        
+        _onboardAudio.PlayNarrationClip(1,.5f);
+        
+        
     }
 
     public void GoToModuleAndCloseMainMenu(int moduleIndex)

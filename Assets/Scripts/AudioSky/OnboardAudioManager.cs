@@ -14,14 +14,9 @@ public class OnboardAudioManager : MonoBehaviour
     [SerializeField] AudioClip[] _onboardClips;  // Audio clips for Onboarding Voiceover
     [SerializeField] private AudioClip[] _pressButtonVO;
     
-    /// <summary>
-    /// The Koreography plugin requires more configuration.  You will see the beginnings of the code in this script. But
-    /// I'm actually only using standard methods to trigger audio clips through events patching.
-    /// </summary>
-    // [EventID]
-    // [SerializeField] string[] _eventID;
-    //
-    // [SerializeField] private KoreographyTrack _koreoClip;
+    
+    
+    
 
     // Use this for initialization
     void Start()
@@ -34,21 +29,16 @@ public class OnboardAudioManager : MonoBehaviour
     }
 
     
-    public void PlayNarrationClip(int clipIndex)  // Play narration clip according to their index number. Call this from an Event Manager.
+    public void PlayNarrationClip(int clipIndex, float delay)  // Play narration clip according to their index number. Call this from an Event Manager.
     {
         if (clipIndex < 0 || clipIndex >= _onboardClips.Length)
         {
             Debug.LogError("Clip index out of range.");
             return;
         }
-
-        if (clipIndex == 0)
-        {
-            PlayClipImmediately(clipIndex);
-        }
         else
         {
-            StartCoroutine(DelayedPlay(clipIndex));
+            StartCoroutine(DelayedPlay(clipIndex, delay));
         }
     }
 
@@ -68,9 +58,9 @@ public class OnboardAudioManager : MonoBehaviour
     /// </summary>
     /// <param name="clipIndex"></param>
     /// <returns></returns>
-    private IEnumerator DelayedPlay(int clipIndex)
+    private IEnumerator DelayedPlay(int clipIndex, float delay)
     {
-        yield return new WaitForSeconds(0f);  // Wait for 0 seconds.  Can be changed later if delays are needed.
+        yield return new WaitForSeconds(delay);  // Wait for 0 seconds.  Can be changed later if delays are needed.
 
         if (_onboardSource.isPlaying)
         {
@@ -81,10 +71,6 @@ public class OnboardAudioManager : MonoBehaviour
         
     }
 
-    void PlayKoreographySection()
-    {
-        //_koreoClip.name.Contains("WelcomeSection");
-    }
-
+    
 
 }
