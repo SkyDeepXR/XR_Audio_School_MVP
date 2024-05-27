@@ -54,6 +54,18 @@
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
+    "com.meta.xr.sdk.avatars": {
+      "version": "file:F:/Users/Sky/XR Bootcamp/Asset Packages/com.meta.xr.sdk.avatars-24.0.0.tgz",
+      "depth": 0,
+      "source": "local-tarball",
+      "dependencies": {
+        "com.meta.xr.sdk.platform": "59.0.0",
+        "com.unity.modules.jsonserialize": "1.0.0",
+        "com.unity.xr.legacyinputhelpers": "2.1.9",
+        "com.unity.ugui": "1.0.0",
+        "com.unity.textmeshpro": "3.0.6"
+      }
+    },
     "com.meta.xr.sdk.core": {
       "version": "65.0.0",
       "depth": 1,
