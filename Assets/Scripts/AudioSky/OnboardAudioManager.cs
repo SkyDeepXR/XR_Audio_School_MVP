@@ -46,7 +46,7 @@ public class OnboardAudioManager : MonoBehaviour
 
     public void PlayBGM()
     {
-        _bgmSource.PlayOneShot(_bgMusic, 5f);
+        _bgmSource.PlayOneShot(_bgMusic, .25f);
     }
     
     public void StopBGM()
