@@ -1,14 +1,9 @@
 fileFormatVersion: 2
-guid: ccc1e6e84ead32b4b85c7aec14fd15f5
+guid: 849550a9abd71b74c9a29366cb76ef31
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: rca-connectors
-    second: {fileID: 2100000, guid: 79029d28cf6fc0840862ee426557e1c1, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0

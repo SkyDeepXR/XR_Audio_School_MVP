@@ -12,8 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: OdinModuleConfig
   m_EditorClassIdentifier: Sirenix.OdinInspector.Editor:Sirenix.OdinInspector.Editor.Modules:OdinModuleConfig
+<<<<<<< Updated upstream
   configurations:
   - ID: Unity.Mathematics
     ActivationSettings: 0
+=======
+  configurations: []
+>>>>>>> Stashed changes
   ModuleTogglingSettings: 1
   ModuleUpdateSettings: 1
