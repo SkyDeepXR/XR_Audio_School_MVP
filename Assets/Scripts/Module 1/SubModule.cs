@@ -6,7 +6,7 @@ using UnityEngine.Events;
 
 public class SubModule : MonoBehaviour
 {
-    public UnityEvent OnModuleIntro, OnModuleStart;
+    public UnityEvent OnModuleIntro, OnModuleStart, OnModuleEnd;
 
     private void OnEnable()
     {
@@ -16,5 +16,10 @@ public class SubModule : MonoBehaviour
     public void StartModule()
     {
         OnModuleStart?.Invoke();
+    }
+
+    public void CompleteModule()
+    {
+        OnModuleEnd?.Invoke();
     }
 }

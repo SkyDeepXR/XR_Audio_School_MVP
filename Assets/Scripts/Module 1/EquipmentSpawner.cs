@@ -13,6 +13,8 @@ public class EquipmentSpawner : MonoBehaviour
     [SerializeField] private TaskManager taskManager;
     [SerializeField] private Transform equipmentsParent;
     [SerializeField] private List<GameObject> equipmentsToSpawn;
+    // TODO edit narration audio events here
+    [SerializeField] private List<NarrationAudioEvent> narrationAudioEvents;
 
     private int noOfEquipmentsPlaced;
 
@@ -74,6 +76,11 @@ public class EquipmentSpawner : MonoBehaviour
         // replace spawn fx here
         currentEquipmentToSpawn.transform.localScale = Vector3.zero;
         currentEquipmentToSpawn.transform.DOScale(Vector3.one, 0.1f);
+
+        if (index >= 0 && index < narrationAudioEvents.Count)
+        {
+            Module01AudioManager.instance.StartPlayNarrationClipCoroutine(narrationAudioEvents[index]);
+        }
     }
 
     private void Reset()

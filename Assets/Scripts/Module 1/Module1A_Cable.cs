@@ -30,7 +30,7 @@ public class Module1A_Cable : MonoBehaviour
     
     [Header("Audio")]
     [SerializeField] private Button replayAudioButton;
-    [SerializeField] private AudioClip audioClip;
+    [SerializeField] private NarrationAudioEvent narrationAudioEvent;
 
     [Header("Events")] 
     [SerializeField] private UnityEvent onActivated;
@@ -84,7 +84,6 @@ public class Module1A_Cable : MonoBehaviour
         if (isActivated)
         {
             onActivated?.Invoke();
-            PlayAudio();
         }
         else
         {
@@ -102,6 +101,6 @@ public class Module1A_Cable : MonoBehaviour
 
     private void PlayAudio()
     {
-        // TODO call Module1AudioManager audio function call here
+        Module01AudioManager.instance.StartPlayNarrationClipCoroutine(narrationAudioEvent);
     }
 }

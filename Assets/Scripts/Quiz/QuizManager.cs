@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using NaughtyAttributes;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class QuizManager : MonoBehaviour
@@ -24,7 +25,7 @@ public class QuizManager : MonoBehaviour
 
     [SerializeField] private int noOfCorrectAnswers;
 
-
+    public UnityEvent OnResultSuccess, OnResultFailure;
 
     private void Awake()
     {
@@ -57,9 +58,15 @@ public class QuizManager : MonoBehaviour
         }
 
         if (noOfCorrectAnswers == quizQuestions.Count)
+        { 
             ShowSuccessPanel();
+            OnResultSuccess?.Invoke();
+        }
         else
+        {
             ShowFailurePanel();
+            OnResultFailure?.Invoke();
+        }
     }
 
     private void ShowQuizPanel()
