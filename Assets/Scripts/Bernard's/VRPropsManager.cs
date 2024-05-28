@@ -26,7 +26,7 @@ public class VRPropsManager : MonoBehaviour
 
     private IEnumerator SetPropsInactiveAfterDelay()
     {
-        yield return new WaitForSeconds(0.01f); // Adjust the delay as needed
+        yield return new WaitForSeconds(0.001f); // Adjust the delay as needed
 
         foreach (GameObject prop in props)
         {

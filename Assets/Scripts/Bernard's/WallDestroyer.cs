@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Meta.XR.Locomotion.Teleporter;
 using UnityEngine;
 using UnityEngine.Serialization;
 using Random = UnityEngine.Random;
@@ -16,6 +17,7 @@ public class WallDestroyer : MonoBehaviour
 
     private Animator _animator;
     private OVRCameraRig cameraRig;
+    private Teleporter _teleporter;
     private void Start()
     {
         _animator = GetComponent<Animator>();
@@ -26,6 +28,12 @@ public class WallDestroyer : MonoBehaviour
         _animator.enabled = false;
         
         cameraRig = FindObjectOfType<OVRCameraRig>();
+        _teleporter = FindObjectOfType<Teleporter>();
+
+        if (_teleporter != null)
+        {
+            _teleporter.enabled = false;
+        }
         if (cameraRig == null)
         {
             Debug.LogError("OVRCameraRig not found in the scene!");
@@ -40,7 +48,7 @@ public class WallDestroyer : MonoBehaviour
         }
     }
 
-    private void StartDestroyingWall()
+   public void StartDestroyingWall()
     {
         Transform centerEyeAnchor = cameraRig.centerEyeAnchor;
         // Set position in front of the player's gaze direction
@@ -50,6 +58,7 @@ public class WallDestroyer : MonoBehaviour
         transform.rotation = Quaternion.LookRotation(centerEyeAnchor.forward, Vector3.up);
 
         _animator.enabled = true;
+        _teleporter.enabled = true;
         
         isStopDestroy = false; // Reset isDestroy in case this method is called again
         StopAllCoroutines(); // Stop any existing coroutines before starting new ones
@@ -68,7 +77,7 @@ public class WallDestroyer : MonoBehaviour
     {
         while (!isStopDestroy)
         {
-            yield return new WaitForSeconds(0.3f); 
+            yield return new WaitForSeconds(0.9f); 
             DestroyWall(); 
         }
     }
