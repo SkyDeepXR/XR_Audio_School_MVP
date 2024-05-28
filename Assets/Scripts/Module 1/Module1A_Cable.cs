@@ -9,6 +9,8 @@ using UnityEngine.UI;
 public class Module1A_Cable : MonoBehaviour
 {
     [SerializeField] private Collider collider;
+    [SerializeField] private GameObject cableGroup;
+    private Quaternion cableGroupOriginalRot;
 
     private bool isActivated = false;
     public delegate void OnCableActivated(Module1A_Cable cable);
@@ -36,17 +38,27 @@ public class Module1A_Cable : MonoBehaviour
 
     private void Start()
     {
-        defaultScale = transform.localScale.x;
+        defaultScale = cableGroup.transform.localScale.x;
+        cableGroupOriginalRot = cableGroup.transform.localRotation;
 
         ToggleImagePrompt(false, 0);
+        replayAudioButton.gameObject.SetActive(false);
         
         replayAudioButton.onClick.AddListener(PlayAudio);
         onActivated.AddListener(PlayAudio);
     }
+
+    private void Update()
+    {
+        if (isActivated)
+        {
+            cableGroup.transform.Rotate(transform.up, 10 * Time.deltaTime);
+        }
+    }
     
     public void SetScale(float scale)
     {
-        transform.localScale = new Vector3(scale, scale, scale);
+        cableGroup.transform.localScale = new Vector3(scale, scale, scale);
     }
 
     [Button]
@@ -59,7 +71,7 @@ public class Module1A_Cable : MonoBehaviour
     {
         isActivated = val;
         collider.enabled = !isActivated;
-        transform.DOScale(Vector3.one * (isActivated ? scaleWhenActivated : defaultScale), scaleFadeDuration);
+        cableGroup.transform.DOScale(Vector3.one * (isActivated ? scaleWhenActivated : defaultScale), scaleFadeDuration);
 
         ToggleImagePrompt(val, imagePromptFadeDuration);
 
@@ -73,6 +85,7 @@ public class Module1A_Cable : MonoBehaviour
         else
         {
             onDeactivated?.Invoke();
+            cableGroup.transform.DOLocalRotateQuaternion(cableGroupOriginalRot, 0.5f);
         }
     }
 
