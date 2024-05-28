@@ -6,7 +6,7 @@ public class Module1A_Manager : MonoBehaviour
 {
     [SerializeField] private List<Module1A_Cable> cables;
 
-    void Awake()
+    void Start()
     {
         foreach (Module1A_Cable cable in cables)
         {

@@ -25,7 +25,7 @@ public class Module1A_Cable : MonoBehaviour
     [Header("UI Elements When Activated")]
     [SerializeField] private CanvasGroup imagePromptCanvasGroup;
     private float imagePromptFadeDuration = 0.5f;
-    [SerializeField] private HighlightEffect highlightEffect;
+    //[SerializeField] private HighlightEffect highlightEffect;
     
     
     [Header("Audio")]
@@ -45,7 +45,7 @@ public class Module1A_Cable : MonoBehaviour
 
         ToggleImagePrompt(false, 0);
         replayAudioButton.gameObject.SetActive(false);
-        highlightEffect.highlighted = false;
+        //highlightEffect.highlighted = false;
         
         replayAudioButton.onClick.AddListener(PlayAudio);
         onActivated.AddListener(PlayAudio);
@@ -79,7 +79,7 @@ public class Module1A_Cable : MonoBehaviour
         ToggleImagePrompt(val, imagePromptFadeDuration);
 
         replayAudioButton.gameObject.SetActive(isActivated);
-        highlightEffect.highlighted = isActivated;
+        //highlightEffect.highlighted = isActivated;
         
         if (isActivated)
         {
