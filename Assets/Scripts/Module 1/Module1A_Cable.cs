@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
+using HighlightPlus;
 using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.Events;
@@ -17,13 +18,14 @@ public class Module1A_Cable : MonoBehaviour
     public OnCableActivated onCableActivated;
     
     [Header("Scale Properties")]
-    private float defaultScale;
     [SerializeField] private float scaleWhenActivated;
+    private float defaultScale;
     private float scaleFadeDuration = 0.5f;
 
     [Header("UI Elements When Activated")]
     [SerializeField] private CanvasGroup imagePromptCanvasGroup;
     private float imagePromptFadeDuration = 0.5f;
+    [SerializeField] private HighlightEffect highlightEffect;
     
     
     [Header("Audio")]
@@ -43,6 +45,7 @@ public class Module1A_Cable : MonoBehaviour
 
         ToggleImagePrompt(false, 0);
         replayAudioButton.gameObject.SetActive(false);
+        highlightEffect.highlighted = false;
         
         replayAudioButton.onClick.AddListener(PlayAudio);
         onActivated.AddListener(PlayAudio);
@@ -76,6 +79,7 @@ public class Module1A_Cable : MonoBehaviour
         ToggleImagePrompt(val, imagePromptFadeDuration);
 
         replayAudioButton.gameObject.SetActive(isActivated);
+        highlightEffect.highlighted = isActivated;
         
         if (isActivated)
         {
