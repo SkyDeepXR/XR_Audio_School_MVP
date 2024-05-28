@@ -41,6 +41,7 @@ public class Module1A_Cable : MonoBehaviour
         ToggleImagePrompt(false, 0);
         
         replayAudioButton.onClick.AddListener(PlayAudio);
+        onActivated.AddListener(PlayAudio);
     }
     
     public void SetScale(float scale)
