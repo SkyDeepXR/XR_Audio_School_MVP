@@ -105,7 +105,7 @@ public class Module2 : MonoBehaviour
     }
 
     [Button]
-    private void GoToNextGameState()
+    public void GoToNextGameState()
     {
         GoToState(gameState + 1);
     }
