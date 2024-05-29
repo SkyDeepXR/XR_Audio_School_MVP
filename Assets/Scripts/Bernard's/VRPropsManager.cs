@@ -20,11 +20,15 @@ public class VRPropsManager : MonoBehaviour
 
         props = GameObject.FindGameObjectsWithTag("Props");
         
+        foreach (GameObject prop in props)
+        {
+            prop.SetActive(false);
+        }
         // Delay setting all props inactive to ensure it's the last operation
-        StartCoroutine(SetPropsInactiveAfterDelay());
+       // StartCoroutine(SetPropsInactiveAfterDelay());
     }
 
-    private IEnumerator SetPropsInactiveAfterDelay()
+    /*private IEnumerator SetPropsInactiveAfterDelay()
     {
         yield return new WaitForSeconds(0.001f); // Adjust the delay as needed
 
@@ -32,7 +36,7 @@ public class VRPropsManager : MonoBehaviour
         {
             prop.SetActive(false);
         }
-    }
+    }*/
 
     public void ActivateProps()
     {

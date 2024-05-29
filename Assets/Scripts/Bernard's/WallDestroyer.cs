@@ -2,8 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using Meta.XR.Locomotion.Teleporter;
 using UnityEngine;
-using UnityEngine.Serialization;
-using Random = UnityEngine.Random;
 
 [RequireComponent(typeof(Animator))]
 public class WallDestroyer : MonoBehaviour
@@ -12,35 +10,41 @@ public class WallDestroyer : MonoBehaviour
     [SerializeField] private LayerMask destroyableLayerMask;
     [SerializeField] private float destroyRadius = 0.05f;
     [SerializeField] private List<GameObject> debrisPrefabs;
-    [SerializeField] private AudioClip hitSound;
-     [SerializeField] private bool isStopDestroy;
+    [SerializeField] private AudioClip[] hitSounds;
+    [SerializeField] private float[] delays;
+    [SerializeField] private bool isStopDestroy;
 
     private Animator _animator;
-    private OVRCameraRig cameraRig;
+    private OVRCameraRig _cameraRig;
     private Teleporter _teleporter;
+    private int _audioIndex;
+    private int _delayIndex;
+
     private void Start()
     {
         _animator = GetComponent<Animator>();
         if (_animator == null)
         {
             Debug.LogError("Animator component not found!");
+            return;
         }
         _animator.enabled = false;
-        
-        cameraRig = FindObjectOfType<OVRCameraRig>();
-        _teleporter = FindObjectOfType<Teleporter>();
 
+        _cameraRig = FindObjectOfType<OVRCameraRig>();
+        if (_cameraRig == null)
+        {
+            Debug.LogError("OVRCameraRig not found in the scene!");
+            return;
+        }
+
+        _teleporter = FindObjectOfType<Teleporter>();
         if (_teleporter != null)
         {
             _teleporter.enabled = false;
         }
-        if (cameraRig == null)
-        {
-            Debug.LogError("OVRCameraRig not found in the scene!");
-        }
     }
 
-    void Update()
+    private void Update()
     {
         if (OVRInput.GetDown(OVRInput.Button.One))
         {
@@ -48,37 +52,46 @@ public class WallDestroyer : MonoBehaviour
         }
     }
 
-   public void StartDestroyingWall()
+    public void StartDestroyingWall()
     {
-        Transform centerEyeAnchor = cameraRig.centerEyeAnchor;
-        // Set position in front of the player's gaze direction
-        transform.position = centerEyeAnchor.position + centerEyeAnchor.forward * eyePositionOffset;
-
-        // Set rotation to match the player's gaze direction
-        transform.rotation = Quaternion.LookRotation(centerEyeAnchor.forward, Vector3.up);
-
-        _animator.enabled = true;
-        _teleporter.enabled = true;
+        Transform centerEyeAnchor = _cameraRig.centerEyeAnchor;
         
-        isStopDestroy = false; // Reset isDestroy in case this method is called again
-        StopAllCoroutines(); // Stop any existing coroutines before starting new ones
+        // Set position and rotation to match the player's gaze direction
+        transform.position = centerEyeAnchor.position + centerEyeAnchor.forward * eyePositionOffset;
+        transform.rotation = Quaternion.LookRotation(centerEyeAnchor.forward, Vector3.up);
+        
+        _animator.enabled = true;
+        if (_teleporter != null)
+        {
+            _teleporter.enabled = true;
+        }
+        
+        isStopDestroy = false;
+        _delayIndex = 0; // Reset the delay index
+        StopAllCoroutines();
         StartCoroutine(CallDestroyWallRepeatedly());
         StartCoroutine(StopDestroyAfterInterval());
     }
 
-    IEnumerator StopDestroyAfterInterval()
+    private IEnumerator StopDestroyAfterInterval()
     {
         yield return new WaitForSeconds(60f);
         isStopDestroy = true;
         _animator.enabled = false;
     }
 
-    IEnumerator CallDestroyWallRepeatedly()
+    private IEnumerator CallDestroyWallRepeatedly()
     {
+        DestroyWall();
         while (!isStopDestroy)
         {
-            yield return new WaitForSeconds(0.9f); 
-            DestroyWall(); 
+            yield return new WaitForSeconds(delays[_delayIndex]);
+            DestroyWall();
+            if (_delayIndex < delays.Length - 1)
+            {
+                _delayIndex++;
+            }
+            destroyRadius += 0.05f;
         }
     }
 
@@ -97,7 +110,12 @@ public class WallDestroyer : MonoBehaviour
                         GameObject debris = Instantiate(debrisPrefab, hit.point, Quaternion.identity);
                         Destroy(hitCollider.gameObject);
                         Destroy(debris, 3f);
-                        AudioSource.PlayClipAtPoint(hitSound, hit.point);
+
+                        if (_audioIndex < hitSounds.Length)
+                        {
+                            AudioSource.PlayClipAtPoint(hitSounds[_audioIndex], hit.point);
+                            _audioIndex++; // Move to the next sound
+                        }
                     }
                     else
                     {
@@ -110,11 +128,12 @@ public class WallDestroyer : MonoBehaviour
         {
             Debug.LogWarning("No object hit by raycast.");
         }
+        
     }
 
-    void OnDrawGizmos()
+    private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawRay(transform.position, transform.rotation * Vector3.forward * 100);
+        Gizmos.DrawRay(transform.position, transform.forward * 100);
     }
 }
