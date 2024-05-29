@@ -900,7 +900,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   xlrSocket: {fileID: 1140937802595799756}
-  xlrSocketEvnetWrapper: {fileID: 0}
+  xlrSocketEvnetWrapper: {fileID: 3517258786989027390}
   connectedXlrCableEnd: {fileID: 0}
   connectedXlrSocket: {fileID: 0}
 --- !u!54 &9181693145420001882
@@ -3168,6 +3168,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 06bd28341d3e86a4c8ab52b1a0269c7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3517258786989027390 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6121396989800494946, guid: 94d61cfbb6f631f4c877a5827f6b7d26,
+    type: 3}
+  m_PrefabInstance: {fileID: 7222720583839909724}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4955330046042397068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1464721f2283eb14e94a33e812b47be4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &4955330046042397068 stripped
