@@ -10,6 +10,7 @@ public class TaskManager : MonoBehaviour
     [SerializeField] private List<TaskItem> taskItems;
 
     public UnityEvent OnAllTasksCompleted;
+    public bool allTaskCompleted => CheckIfAllTasksAreCompleted();
 
     public void CompleteTask(int index)
     {
