@@ -46,12 +46,7 @@ namespace DA_Assets.FCU
                 bool isDownloadable = IsDownloadable(fobject);
                 bool isDrawable = IsDrawable(fobject);
 
-                if (fobject.Data.ForceImage)
-                {
-                    fobject.Data.FcuImageType = FcuImageType.Downloadable;
-                    downloadableIds.Add(fobject.Id);
-                }
-                else if (isGenerative)
+                if (isGenerative)
                 {
                     fobject.Data.FcuImageType = FcuImageType.Generative;
                     generativeIds.Add(fobject.Id);
