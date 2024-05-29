@@ -1,44 +1,9 @@
 fileFormatVersion: 2
-guid: ac686a4020dfda048a66433c198785ab
+guid: 2c6ea880eb72326469781c12c96068b7
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Black Plastic-1
-    second: {fileID: 2100000, guid: 0e175e395407ca94a9e2c3259e36d1e9, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Black Plastic-2
-    second: {fileID: 2100000, guid: 00ce29e2b3eb40f4e8c2c91e77f7d6f9, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Cable
-    second: {fileID: 2100000, guid: 09441412a4112e44b9c1db08560fe1f0, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Chrome
-    second: {fileID: 2100000, guid: 36e2fe318c836e54c98cbd90fa31bf6c, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Orange Plastic
-    second: {fileID: 2100000, guid: 979a19777c7c15d4b9c449c5432c8c08, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Silicone Grip
-    second: {fileID: 2100000, guid: 9762ee3a5410b6847a21bc31ef9f1a73, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: White Plastic
-    second: {fileID: 2100000, guid: b6df82352edb48c4e9b15f302242b0b0, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0

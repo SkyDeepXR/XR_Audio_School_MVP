@@ -1,54 +1,9 @@
 fileFormatVersion: 2
-guid: 6ab8c670bdbe7af4dbc0b27f00ed5351
+guid: 0531813e245cfd8428b6006a297b1a8f
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: bartable
-    second: {fileID: 2100000, guid: aaea2aa6931c4b74dbbdc82f16c4f15a, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: curtain1
-    second: {fileID: 2100000, guid: 97a05b2799c56bc419227441d4a5c85a, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: stool
-    second: {fileID: 2100000, guid: 88b14075aea2c624e85e34c0e68be2b9, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: tube1
-    second: {fileID: 2100000, guid: ebb171ef897cd604f86f558f5dd54352, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: tube2
-    second: {fileID: 2100000, guid: 145248a1860b5c647a5124b1efc452b7, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: wall1
-    second: {fileID: 2100000, guid: 3155d64aafdfab44d895d3efacb4efdb, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: wall2
-    second: {fileID: 2100000, guid: 9542baa5343a81341a5b17fe912a8f13, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: wall3
-    second: {fileID: 2100000, guid: c6b711f244ef29f448cf85114f1fcf6a, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: wall4
-    second: {fileID: 2100000, guid: 6338739f253ed62469320d132de2d06e, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
