@@ -1732,7 +1732,7 @@ MonoBehaviour:
   speakerSocketR: {fileID: 4009217072467309769}
   micSocketEventWrapper: {fileID: 8482290741133897268}
   speakerSocketLEventWrapper: {fileID: 8159825340436332750}
-  speakerSocketREventWrapper: {fileID: 0}
+  speakerSocketREventWrapper: {fileID: 686745803572406042}
   micCableEnd: {fileID: 0}
   speakerLCableEnd: {fileID: 0}
   speakerRCableEnd: {fileID: 0}
@@ -4004,6 +4004,18 @@ PrefabInstance:
       insertIndex: 1
       addedObject: {fileID: 2622394307968251021}
   m_SourcePrefab: {fileID: 100100000, guid: 5143791016341f948b64dfddab6a630d, type: 3}
+--- !u!114 &686745803572406042 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6182730889224750659, guid: 5143791016341f948b64dfddab6a630d,
+    type: 3}
+  m_PrefabInstance: {fileID: 6650329384106320217}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8985291628742492041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1464721f2283eb14e94a33e812b47be4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &4009217072467309769 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7775797876552603024, guid: 5143791016341f948b64dfddab6a630d,
