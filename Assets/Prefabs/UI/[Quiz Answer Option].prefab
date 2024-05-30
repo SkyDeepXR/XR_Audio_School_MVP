@@ -48,6 +48,43 @@ PrefabInstance:
       propertyPath: m_text
       value: 'Label Label Label Label Label Label '
       objectReference: {fileID: 0}
+    - target: {fileID: 1436804368455433716, guid: aa3bea09acfed1546a466bdc1c25adc0,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: ba19cc6453d6f00429c3c5dc7f73aa34,
+        type: 2}
+    - target: {fileID: 1436804368455433716, guid: aa3bea09acfed1546a466bdc1c25adc0,
+        type: 3}
+      propertyPath: m_fontColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1436804368455433716, guid: aa3bea09acfed1546a466bdc1c25adc0,
+        type: 3}
+      propertyPath: m_fontColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1436804368455433716, guid: aa3bea09acfed1546a466bdc1c25adc0,
+        type: 3}
+      propertyPath: m_fontColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1436804368455433716, guid: aa3bea09acfed1546a466bdc1c25adc0,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -5235695321455125149, guid: ba19cc6453d6f00429c3c5dc7f73aa34,
+        type: 2}
+    - target: {fileID: 1436804368455433716, guid: aa3bea09acfed1546a466bdc1c25adc0,
+        type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4278190080
+      objectReference: {fileID: 0}
+    - target: {fileID: 1436804368455433716, guid: aa3bea09acfed1546a466bdc1c25adc0,
+        type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1460870759500212242, guid: aa3bea09acfed1546a466bdc1c25adc0,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -261,7 +298,7 @@ PrefabInstance:
     - target: {fileID: 6918080846398599583, guid: aa3bea09acfed1546a466bdc1c25adc0,
         type: 3}
       propertyPath: m_Name
-      value: '[Answer Option] Variant'
+      value: '[Quiz Answer Option]'
       objectReference: {fileID: 0}
     - target: {fileID: 8441372443077412200, guid: aa3bea09acfed1546a466bdc1c25adc0,
         type: 3}
@@ -350,3 +387,4 @@ MonoBehaviour:
   isCorrectAnswer: 0
   answerText: {fileID: 123548339456542459}
   toggle: {fileID: 6823660201498352245}
+  siblingIndex_correct: 0
