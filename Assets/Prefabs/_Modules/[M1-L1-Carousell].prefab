@@ -62,7 +62,7 @@ MonoBehaviour:
   replayAudioButton: {fileID: 4147412677946010748}
   narrationAudioEvent:
     preDelay: 0
-    audioClip: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: 974ee36cf36427046b79d4c1e8d17235, type: 3}
     postDelay: 0
   onActivated:
     m_PersistentCalls:
@@ -2249,7 +2249,7 @@ MonoBehaviour:
   replayAudioButton: {fileID: 5565931944135945309}
   narrationAudioEvent:
     preDelay: 0
-    audioClip: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: 55e91d3fb16a2eb41a3c91f9f2051724, type: 3}
     postDelay: 0
   onActivated:
     m_PersistentCalls:
@@ -3587,7 +3587,7 @@ MonoBehaviour:
   replayAudioButton: {fileID: 8116479055837194678}
   narrationAudioEvent:
     preDelay: 0
-    audioClip: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: d45b7bdfc905a52438498e39c97b0265, type: 3}
     postDelay: 0
   onActivated:
     m_PersistentCalls:
@@ -6496,7 +6496,7 @@ MonoBehaviour:
   replayAudioButton: {fileID: 6390250172146829030}
   narrationAudioEvent:
     preDelay: 0
-    audioClip: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: 3fd5afc3bd4d67c4ea3e60245086ac24, type: 3}
     postDelay: 0
   onActivated:
     m_PersistentCalls:
@@ -9844,7 +9844,7 @@ MonoBehaviour:
   replayAudioButton: {fileID: 2611345313607741918}
   narrationAudioEvent:
     preDelay: 0
-    audioClip: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: ec5d508532404e24aa321841e00ddc03, type: 3}
     postDelay: 0
   onActivated:
     m_PersistentCalls:
