@@ -26,9 +26,22 @@ public class Module3 : MonoBehaviour
     [SerializeField] public UnityEvent OnTaskFinishedEvent;
     [SerializeField] public UnityEvent OnPerformanceStartEvent;
 
+    void Start()
+    {
+        taskManager.OnAllTasksCompleted.AddListener(() =>
+        {
+            GoToState(Module3GameState.TaskFinished);
+        });
+    }
+    
     void OnEnable()
     {
         GoToState(Module3GameState.Intro);
+    }
+
+    public void GoToState(int gameStateIndex)
+    {
+        GoToState((Module3GameState)gameStateIndex);
     }
 
     public void GoToState(Module3GameState newGameState)
@@ -70,4 +83,6 @@ public class Module3 : MonoBehaviour
             OnTaskFailedEvent?.Invoke();
         }
     }
+    
+    
 }
