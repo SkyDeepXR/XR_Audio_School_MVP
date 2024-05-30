@@ -7273,7 +7273,7 @@ MonoBehaviour:
   replayAudioButton: {fileID: 900266569630039162}
   narrationAudioEvent:
     preDelay: 0
-    audioClip: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: 34dba93a06d60a540a907c9824ce61db, type: 3}
     postDelay: 0
   onActivated:
     m_PersistentCalls:
@@ -9809,7 +9809,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.710603, z: 0, w: 0.70359325}
   m_LocalPosition: {x: -0.66583174, y: 1.038, z: -0.049725235}
-  m_LocalScale: {x: 0.60000014, y: 0.6, z: 0.6}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 8446754357121042967}
@@ -11980,6 +11980,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7826077536048665183}
     m_Modifications:
+    - target: {fileID: 2228641213175361420, guid: fd1e1c66fcc65f347924aeeb4f55563c,
+        type: 3}
+      propertyPath: m_text
+      value: 'Mini Jack cables-- also  known as 1/8 inch
+
+        or 3.5mm -- come
+        in many varieties like
+
+        TRS, TS or TRRS.  The same properties
+
+        described
+        for their bigger siblings
+
+        apply here too.'
+      objectReference: {fileID: 0}
     - target: {fileID: 5592048308613985825, guid: fd1e1c66fcc65f347924aeeb4f55563c,
         type: 3}
       propertyPath: m_Name
@@ -11998,7 +12013,7 @@ PrefabInstance:
     - target: {fileID: 6128884685467484633, guid: fd1e1c66fcc65f347924aeeb4f55563c,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 311
+      value: 319.25
       objectReference: {fileID: 0}
     - target: {fileID: 6128884685467484633, guid: fd1e1c66fcc65f347924aeeb4f55563c,
         type: 3}
@@ -12008,7 +12023,7 @@ PrefabInstance:
     - target: {fileID: 6128884685467484633, guid: fd1e1c66fcc65f347924aeeb4f55563c,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 171.5
+      value: 175.625
       objectReference: {fileID: 0}
     - target: {fileID: 6128884685467484633, guid: fd1e1c66fcc65f347924aeeb4f55563c,
         type: 3}
@@ -12134,6 +12149,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8278535652005460761}
     m_Modifications:
+    - target: {fileID: 2228641213175361420, guid: fd1e1c66fcc65f347924aeeb4f55563c,
+        type: 3}
+      propertyPath: m_text
+      value: "TS Cables \u2013 short for Tip / Sleeve & often\nreferred to as guitar
+        or instrument cables\n \u2013  are always unbalanced. They allow you\nto
+        connect mono (one-channel) audio\nsources and can come in different sizes."
+      objectReference: {fileID: 0}
     - target: {fileID: 5592048308613985825, guid: fd1e1c66fcc65f347924aeeb4f55563c,
         type: 3}
       propertyPath: m_Name
@@ -12152,7 +12174,7 @@ PrefabInstance:
     - target: {fileID: 6128884685467484633, guid: fd1e1c66fcc65f347924aeeb4f55563c,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 311
+      value: 317.65
       objectReference: {fileID: 0}
     - target: {fileID: 6128884685467484633, guid: fd1e1c66fcc65f347924aeeb4f55563c,
         type: 3}
@@ -12162,7 +12184,7 @@ PrefabInstance:
     - target: {fileID: 6128884685467484633, guid: fd1e1c66fcc65f347924aeeb4f55563c,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 171.5
+      value: 174.825
       objectReference: {fileID: 0}
     - target: {fileID: 6128884685467484633, guid: fd1e1c66fcc65f347924aeeb4f55563c,
         type: 3}
@@ -12288,6 +12310,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1240188205254661701}
     m_Modifications:
+    - target: {fileID: 2228641213175361420, guid: fd1e1c66fcc65f347924aeeb4f55563c,
+        type: 3}
+      propertyPath: m_text
+      value: "XLR connectors are a type of electrical \nconnector commonly used in
+        pro audio &\nvideo. You will often here it referred to as\na microphone cable. 
+        \nXLR's are always balanced cables."
+      objectReference: {fileID: 0}
     - target: {fileID: 5592048308613985825, guid: fd1e1c66fcc65f347924aeeb4f55563c,
         type: 3}
       propertyPath: m_Name
@@ -12306,7 +12335,7 @@ PrefabInstance:
     - target: {fileID: 6128884685467484633, guid: fd1e1c66fcc65f347924aeeb4f55563c,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 311
+      value: 313.53
       objectReference: {fileID: 0}
     - target: {fileID: 6128884685467484633, guid: fd1e1c66fcc65f347924aeeb4f55563c,
         type: 3}
@@ -12316,7 +12345,7 @@ PrefabInstance:
     - target: {fileID: 6128884685467484633, guid: fd1e1c66fcc65f347924aeeb4f55563c,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 171.5
+      value: 172.765
       objectReference: {fileID: 0}
     - target: {fileID: 6128884685467484633, guid: fd1e1c66fcc65f347924aeeb4f55563c,
         type: 3}
@@ -18750,6 +18779,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7860409032906853979}
     m_Modifications:
+    - target: {fileID: 2228641213175361420, guid: fd1e1c66fcc65f347924aeeb4f55563c,
+        type: 3}
+      propertyPath: m_text
+      value: 'SpeakOn cables are considered by most
+
+        to be the industry standard
+        for connecting
+
+        professional speakers & amplifiers. They
+
+        are
+        a popular alternative to jack cables
+
+        thanks to their ability to
+        lock in place.'
+      objectReference: {fileID: 0}
     - target: {fileID: 5592048308613985825, guid: fd1e1c66fcc65f347924aeeb4f55563c,
         type: 3}
       propertyPath: m_Name
@@ -18768,7 +18813,7 @@ PrefabInstance:
     - target: {fileID: 6128884685467484633, guid: fd1e1c66fcc65f347924aeeb4f55563c,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 311
+      value: 320.51
       objectReference: {fileID: 0}
     - target: {fileID: 6128884685467484633, guid: fd1e1c66fcc65f347924aeeb4f55563c,
         type: 3}
@@ -18778,7 +18823,7 @@ PrefabInstance:
     - target: {fileID: 6128884685467484633, guid: fd1e1c66fcc65f347924aeeb4f55563c,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 171.5
+      value: 176.255
       objectReference: {fileID: 0}
     - target: {fileID: 6128884685467484633, guid: fd1e1c66fcc65f347924aeeb4f55563c,
         type: 3}
@@ -19499,6 +19544,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3615101333397494575}
     m_Modifications:
+    - target: {fileID: 2228641213175361420, guid: fd1e1c66fcc65f347924aeeb4f55563c,
+        type: 3}
+      propertyPath: m_text
+      value: "RCA cables are common in home A/V\nsystems and are also often found
+        in DJ\nsetups connecting CDJs and turntables to\nmixers. Each RCA cable is 
+        unbalanced, so\nit\u2019s best to keep them as short as possible."
+      objectReference: {fileID: 0}
     - target: {fileID: 5592048308613985825, guid: fd1e1c66fcc65f347924aeeb4f55563c,
         type: 3}
       propertyPath: m_Name
@@ -19517,7 +19569,7 @@ PrefabInstance:
     - target: {fileID: 6128884685467484633, guid: fd1e1c66fcc65f347924aeeb4f55563c,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 311
+      value: 322.51
       objectReference: {fileID: 0}
     - target: {fileID: 6128884685467484633, guid: fd1e1c66fcc65f347924aeeb4f55563c,
         type: 3}
@@ -19527,7 +19579,7 @@ PrefabInstance:
     - target: {fileID: 6128884685467484633, guid: fd1e1c66fcc65f347924aeeb4f55563c,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 171.5
+      value: 177.255
       objectReference: {fileID: 0}
     - target: {fileID: 6128884685467484633, guid: fd1e1c66fcc65f347924aeeb4f55563c,
         type: 3}
@@ -19653,6 +19705,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1788222589544629519}
     m_Modifications:
+    - target: {fileID: 2228641213175361420, guid: fd1e1c66fcc65f347924aeeb4f55563c,
+        type: 3}
+      propertyPath: m_text
+      value: 'TRS cables look similar to  TS but you can
+
+        see the difference
+        by the two strips on the
+
+        header, forming 3 conductors: Tip / Ring
+        /
+
+        Sleeve. They can be balanced or not. Most
+
+        used in audio
+        interfaces & studio monitors.'
+      objectReference: {fileID: 0}
     - target: {fileID: 5592048308613985825, guid: fd1e1c66fcc65f347924aeeb4f55563c,
         type: 3}
       propertyPath: m_Name
@@ -19671,7 +19739,7 @@ PrefabInstance:
     - target: {fileID: 6128884685467484633, guid: fd1e1c66fcc65f347924aeeb4f55563c,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 311
+      value: 323.21
       objectReference: {fileID: 0}
     - target: {fileID: 6128884685467484633, guid: fd1e1c66fcc65f347924aeeb4f55563c,
         type: 3}
@@ -19681,7 +19749,7 @@ PrefabInstance:
     - target: {fileID: 6128884685467484633, guid: fd1e1c66fcc65f347924aeeb4f55563c,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 171.5
+      value: 177.605
       objectReference: {fileID: 0}
     - target: {fileID: 6128884685467484633, guid: fd1e1c66fcc65f347924aeeb4f55563c,
         type: 3}

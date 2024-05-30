@@ -462,9 +462,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 10144a31d6cac894daa5b6499c80ee4a, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 94eb7d0ea73f67d4d9b36264670fbfdd, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.367
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1025,9 +1025,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 10144a31d6cac894daa5b6499c80ee4a, type: 3}
+  m_audioClip: {fileID: 8300000, guid: ea34c849ddd2b094399be92c23616b9b, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.367
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1588,9 +1588,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 10144a31d6cac894daa5b6499c80ee4a, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 7295092abd9724849888c5a67c05d6cc, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.367
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -2074,9 +2074,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 10144a31d6cac894daa5b6499c80ee4a, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 2f4dec4f5d2e7944daf751bd6e314510, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.367
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -2561,9 +2561,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 10144a31d6cac894daa5b6499c80ee4a, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 8fe507e655f5cea4ca26b6c875a2ca63, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.367
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -3124,9 +3124,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 10144a31d6cac894daa5b6499c80ee4a, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 67bccb29af995e14aaafd4241a327d82, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.367
   m_Pitch: 1
   Loop: 0
   Mute: 0
