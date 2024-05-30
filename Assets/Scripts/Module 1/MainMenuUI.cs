@@ -36,7 +36,7 @@ public class MainMenuUI : MonoBehaviour
     void Update()
     {
         // button click for splash screen
-        if (currentPageIndex == 0 && OVRInput.GetDown(OVRInput.Button.One))
+        if (currentPageIndex <= 2 && OVRInput.GetDown(OVRInput.Button.One))
         {
             GoToNextPage();
         }
