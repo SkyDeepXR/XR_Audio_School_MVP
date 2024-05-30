@@ -1,16 +1,25 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Meta.XR.Locomotion.Teleporter;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 [RequireComponent(typeof(Animator))]
 public class WallDestroyer : MonoBehaviour
 {
+    [Serializable]
+    public class AudioWithVolume
+    {
+        public AudioClip clip;
+        [Range(0f, 1f)] public float volume = 1f; 
+    }
+    
     [SerializeField] private float eyePositionOffset = 1.2f;
     [SerializeField] private LayerMask destroyableLayerMask;
-    [SerializeField] private float destroyRadius = 0.05f;
     [SerializeField] private List<GameObject> debrisPrefabs;
-    [SerializeField] private AudioClip[] hitSounds;
+    [SerializeField] private List<AudioWithVolume> hitSoundsWithVolume;
+    [SerializeField] private float[] destroyRadius;
     [SerializeField] private float[] delays;
     [SerializeField] private bool isStopDestroy;
 
@@ -19,6 +28,7 @@ public class WallDestroyer : MonoBehaviour
     private Teleporter _teleporter;
     private int _audioIndex;
     private int _delayIndex;
+    private int _destroyRadiusIndex;
 
     private void Start()
     {
@@ -29,7 +39,6 @@ public class WallDestroyer : MonoBehaviour
             return;
         }
         _animator.enabled = false;
-
         _cameraRig = FindObjectOfType<OVRCameraRig>();
         if (_cameraRig == null)
         {
@@ -50,6 +59,7 @@ public class WallDestroyer : MonoBehaviour
         {
             StartDestroyingWall();
         }
+        
     }
 
     public void StartDestroyingWall()
@@ -60,46 +70,47 @@ public class WallDestroyer : MonoBehaviour
         transform.position = centerEyeAnchor.position + centerEyeAnchor.forward * eyePositionOffset;
         transform.rotation = Quaternion.LookRotation(centerEyeAnchor.forward, Vector3.up);
         
-        _animator.enabled = true;
         if (_teleporter != null)
         {
             _teleporter.enabled = true;
         }
-        
-        isStopDestroy = false;
+        _animator.enabled = true;
         _delayIndex = 0; // Reset the delay index
+        _audioIndex = 0;
+        _destroyRadiusIndex = 0;
         StopAllCoroutines();
         StartCoroutine(CallDestroyWallRepeatedly());
         StartCoroutine(StopDestroyAfterInterval());
     }
 
-    private IEnumerator StopDestroyAfterInterval()
+    IEnumerator StopDestroyAfterInterval()
     {
         yield return new WaitForSeconds(60f);
         isStopDestroy = true;
         _animator.enabled = false;
     }
-
     private IEnumerator CallDestroyWallRepeatedly()
     {
         DestroyWall();
+        Debug.Log($"<color=yellow> destroy wall called Once</color>");
         while (!isStopDestroy)
         {
+            Debug.Log($"<color=blue> delay index: {_delayIndex}</color>");
             yield return new WaitForSeconds(delays[_delayIndex]);
             DestroyWall();
             if (_delayIndex < delays.Length - 1)
             {
                 _delayIndex++;
             }
-            destroyRadius += 0.05f;
         }
     }
 
     private void DestroyWall()
     {
+        Debug.Log($"<color=green> destroy wall called</color>");
         if (Physics.Raycast(transform.position, transform.rotation * Vector3.forward, out RaycastHit hit, Mathf.Infinity, destroyableLayerMask))
         {
-            Collider[] hitColliders = Physics.OverlapSphere(hit.point, destroyRadius, destroyableLayerMask);
+            Collider[] hitColliders = Physics.OverlapSphere(hit.point, destroyRadius[_destroyRadiusIndex], destroyableLayerMask);
             foreach (Collider hitCollider in hitColliders)
             {
                 if (hitCollider.gameObject.layer == LayerMask.NameToLayer("Destroy"))
@@ -111,10 +122,17 @@ public class WallDestroyer : MonoBehaviour
                         Destroy(hitCollider.gameObject);
                         Destroy(debris, 3f);
 
-                        if (_audioIndex < hitSounds.Length)
+                        if (_audioIndex < hitSoundsWithVolume.Count)
                         {
-                            AudioSource.PlayClipAtPoint(hitSounds[_audioIndex], hit.point);
-                            _audioIndex++; // Move to the next sound
+                            AudioWithVolume audioClipWithVolume = hitSoundsWithVolume[_audioIndex];
+                            AudioSource.PlayClipAtPoint(audioClipWithVolume.clip, hit.point, audioClipWithVolume.volume);
+                            _audioIndex++;
+                        }
+
+                        if (_destroyRadiusIndex < destroyRadius.Length - 1)
+                        {
+                            Debug.Log($"<color=green> radius index: {_destroyRadiusIndex}</color>");
+                            _destroyRadiusIndex++;
                         }
                     }
                     else
@@ -128,7 +146,6 @@ public class WallDestroyer : MonoBehaviour
         {
             Debug.LogWarning("No object hit by raycast.");
         }
-        
     }
 
     private void OnDrawGizmos()

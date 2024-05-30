@@ -51,7 +51,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 196575845026335917}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -107,7 +107,14 @@ MonoBehaviour:
   - {fileID: 5180476525991290170, guid: 113634e7ee728794eaa3faf4cdc4d952, type: 3}
   - {fileID: 2128157602651581397, guid: ea34b2bcfbb121c4b99d8e2743ba3c17, type: 3}
   - {fileID: 511947734031409164, guid: 258b3911319863d4b94e7950e0f00898, type: 3}
-  hitSound: {fileID: 8300000, guid: be5579c299bba5849b03d67cb24c898c, type: 3}
+  hitSounds:
+  - {fileID: 8300000, guid: be5579c299bba5849b03d67cb24c898c, type: 3}
+  - {fileID: 8300000, guid: 00730a1aaf5cef349b10f6235aeeddba, type: 3}
+  - {fileID: 8300000, guid: b5f94272bfe14094f8db8e5cb77273db, type: 3}
+  delays:
+  - 10
+  - 5
+  - 2
   isStopDestroy: 0
 --- !u!95 &7196817530010247
 Animator:
@@ -178,7 +185,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3233140647123519850}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
