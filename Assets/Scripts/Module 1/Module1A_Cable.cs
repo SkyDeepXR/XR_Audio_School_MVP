@@ -99,8 +99,9 @@ public class Module1A_Cable : MonoBehaviour
         imagePromptCanvasGroup.blocksRaycasts = isToggled;
     }
 
-    private void PlayAudio()
+    public void PlayAudio()
     {
-        Module01AudioManager.instance.StartPlayNarrationClipCoroutine(narrationAudioEvent);
+        if (Module01AudioManager.instance)
+            Module01AudioManager.instance.StartPlayNarrationClipCoroutine(narrationAudioEvent);
     }
 }

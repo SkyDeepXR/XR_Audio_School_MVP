@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using NaughtyAttributes;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -15,6 +16,8 @@ public class GUI_QuizAnswerOption : MonoBehaviour
     public delegate void OnAnswerSelected(bool isCorrectAnswer);
     public OnAnswerSelected onAnswerSelected;
 
+    [Header("DEBUG")]
+    [SerializeField] private int siblingIndex_correct;
 
     private void Awake()
     {
@@ -44,5 +47,17 @@ public class GUI_QuizAnswerOption : MonoBehaviour
     public void SetToggleGroup(ToggleGroup toggleGroup)
     {
         toggle.group = toggleGroup;
+    }
+
+    [Button]
+    private void SetSiblingIndex()
+    {
+        transform.SetSiblingIndex(siblingIndex_correct);
+    }
+    
+    public void SetSiblingIndex(int index)
+    {
+        siblingIndex_correct = index;
+        transform.SetSiblingIndex(index);
     }
 }
