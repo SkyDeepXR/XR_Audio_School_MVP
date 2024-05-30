@@ -426,7 +426,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 10144a31d6cac894daa5b6499c80ee4a, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.324
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -522,7 +522,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 205e87d2e4ec5e449a635fc16b887327, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collisionSound: {fileID: 8300000, guid: 10144a31d6cac894daa5b6499c80ee4a, type: 3}
+  collisionSound: {fileID: 8300000, guid: 4f82c90ab2f76ba4d884585ae16c9ddd, type: 3}
   minimumVelocity: 2
   volumeScale: 1
 --- !u!1 &3612287449392780032
@@ -875,7 +875,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 10144a31d6cac894daa5b6499c80ee4a, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.324
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -971,7 +971,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 205e87d2e4ec5e449a635fc16b887327, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collisionSound: {fileID: 8300000, guid: 10144a31d6cac894daa5b6499c80ee4a, type: 3}
+  collisionSound: {fileID: 8300000, guid: 114117af167fe4e419864d16d70ce6bf, type: 3}
   minimumVelocity: 2
   volumeScale: 1
 --- !u!1 &4510454844049167231
@@ -1438,7 +1438,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 10144a31d6cac894daa5b6499c80ee4a, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.324
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1534,7 +1534,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 205e87d2e4ec5e449a635fc16b887327, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collisionSound: {fileID: 8300000, guid: 10144a31d6cac894daa5b6499c80ee4a, type: 3}
+  collisionSound: {fileID: 8300000, guid: 2f4dec4f5d2e7944daf751bd6e314510, type: 3}
   minimumVelocity: 2
   volumeScale: 1
 --- !u!1 &4544419125239812235
@@ -1999,9 +1999,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 10144a31d6cac894daa5b6499c80ee4a, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 94eb7d0ea73f67d4d9b36264670fbfdd, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.324
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -2097,7 +2097,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 205e87d2e4ec5e449a635fc16b887327, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collisionSound: {fileID: 8300000, guid: 10144a31d6cac894daa5b6499c80ee4a, type: 3}
+  collisionSound: {fileID: 8300000, guid: 721a73278ec878c4a890652be1adaea9, type: 3}
   minimumVelocity: 2
   volumeScale: 1
 --- !u!1 &5180476525991290170
@@ -2601,9 +2601,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 10144a31d6cac894daa5b6499c80ee4a, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 5a91b08f59ae04042a40ad8ffd5f9a88, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.324
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -3090,7 +3090,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 10144a31d6cac894daa5b6499c80ee4a, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.324
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -3186,7 +3186,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 205e87d2e4ec5e449a635fc16b887327, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collisionSound: {fileID: 8300000, guid: 10144a31d6cac894daa5b6499c80ee4a, type: 3}
+  collisionSound: {fileID: 8300000, guid: 8fe507e655f5cea4ca26b6c875a2ca63, type: 3}
   minimumVelocity: 2
   volumeScale: 1
 --- !u!1 &5429743400359917109
@@ -3651,9 +3651,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 10144a31d6cac894daa5b6499c80ee4a, type: 3}
+  m_audioClip: {fileID: 8300000, guid: cfa4e184852e0d0408b2985224137a11, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.324
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -3749,7 +3749,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 205e87d2e4ec5e449a635fc16b887327, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collisionSound: {fileID: 8300000, guid: 10144a31d6cac894daa5b6499c80ee4a, type: 3}
+  collisionSound: {fileID: 8300000, guid: 210b47da328bf214499843f1df4ecfdf, type: 3}
   minimumVelocity: 2
   volumeScale: 1
 --- !u!1 &8169263457180678117
@@ -4214,9 +4214,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 10144a31d6cac894daa5b6499c80ee4a, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 8c811a323a7c298439503c3379858610, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.324
   m_Pitch: 1
   Loop: 0
   Mute: 0
