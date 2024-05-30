@@ -30541,11 +30541,86 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6552610299133785753}
     m_Modifications:
+    - target: {fileID: 368928104748625958, guid: f7afaafa8ac826a43831e6ef0ba0823c,
+        type: 3}
+      propertyPath: _clipsModule01.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 368928104748625958, guid: f7afaafa8ac826a43831e6ef0ba0823c,
+        type: 3}
+      propertyPath: _clipsModule01.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: febe171fb221c134fa87f9f6ec35238d, type: 3}
+    - target: {fileID: 368928104748625958, guid: f7afaafa8ac826a43831e6ef0ba0823c,
+        type: 3}
+      propertyPath: _clipsModule01.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 9a6df8a8abeef8244b488c7272867832, type: 3}
+    - target: {fileID: 368928104748625958, guid: f7afaafa8ac826a43831e6ef0ba0823c,
+        type: 3}
+      propertyPath: _clipsModule01.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: adcbfa9976c4c564fb9ef21dea236fa5, type: 3}
+    - target: {fileID: 368928104748625958, guid: f7afaafa8ac826a43831e6ef0ba0823c,
+        type: 3}
+      propertyPath: _clipsModule01.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: 50001386311ff5442b618560ac903d88, type: 3}
+    - target: {fileID: 368928104748625958, guid: f7afaafa8ac826a43831e6ef0ba0823c,
+        type: 3}
+      propertyPath: _clipsModule01.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: 8f5c7f46eb496e14395cba550a10642f, type: 3}
+    - target: {fileID: 368928104748625958, guid: f7afaafa8ac826a43831e6ef0ba0823c,
+        type: 3}
+      propertyPath: _clipsModule01.Array.data[5]
+      value: 
+      objectReference: {fileID: 8300000, guid: ddfeaec6b338414459bc7805ec811f73, type: 3}
+    - target: {fileID: 368928104748625958, guid: f7afaafa8ac826a43831e6ef0ba0823c,
+        type: 3}
+      propertyPath: _clipsModule01.Array.data[6]
+      value: 
+      objectReference: {fileID: 8300000, guid: f6f297e86e5a3954ab079fd955535a6a, type: 3}
+    - target: {fileID: 368928104748625958, guid: f7afaafa8ac826a43831e6ef0ba0823c,
+        type: 3}
+      propertyPath: _clipsModule01.Array.data[7]
+      value: 
+      objectReference: {fileID: 8300000, guid: 172183ca01b206d48b4eb1526ddf5a82, type: 3}
+    - target: {fileID: 368928104748625958, guid: f7afaafa8ac826a43831e6ef0ba0823c,
+        type: 3}
+      propertyPath: _narrationAudioEvents.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 368928104748625958, guid: f7afaafa8ac826a43831e6ef0ba0823c,
+        type: 3}
+      propertyPath: _narrationAudioEvents.Array.data[0].audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 50001386311ff5442b618560ac903d88, type: 3}
     - target: {fileID: 2632216209187842556, guid: f7afaafa8ac826a43831e6ef0ba0823c,
         type: 3}
       propertyPath: m_Name
       value: Narrator Sphere with Follower
       objectReference: {fileID: 0}
+    - target: {fileID: 5426332546724318679, guid: f7afaafa8ac826a43831e6ef0ba0823c,
+        type: 3}
+      propertyPath: _narrationAudioEvents.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5426332546724318679, guid: f7afaafa8ac826a43831e6ef0ba0823c,
+        type: 3}
+      propertyPath: _narrationAudioEvents.Array.data[0].audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: adcbfa9976c4c564fb9ef21dea236fa5, type: 3}
+    - target: {fileID: 5930372567092482882, guid: f7afaafa8ac826a43831e6ef0ba0823c,
+        type: 3}
+      propertyPath: _narrationAudioEvents.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5930372567092482882, guid: f7afaafa8ac826a43831e6ef0ba0823c,
+        type: 3}
+      propertyPath: _narrationAudioEvents.Array.data[0].audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: adcbfa9976c4c564fb9ef21dea236fa5, type: 3}
     - target: {fileID: 6265572716677380774, guid: f7afaafa8ac826a43831e6ef0ba0823c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -30660,7 +30735,7 @@ PrefabInstance:
         type: 3}
       propertyPath: _narrationAudioEvents.Array.data[2].audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: d25116a83f7081a40be95921c1ff88bb, type: 3}
+      objectReference: {fileID: 8300000, guid: baf1ba7890a2d3b4da4a8b980b24335b, type: 3}
     - target: {fileID: 8380083846330812902, guid: f7afaafa8ac826a43831e6ef0ba0823c,
         type: 3}
       propertyPath: _narrationAudioEvents.Array.data[3].audioClip
