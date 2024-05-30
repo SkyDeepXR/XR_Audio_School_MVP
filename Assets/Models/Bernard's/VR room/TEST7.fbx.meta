@@ -1,9 +1,54 @@
 fileFormatVersion: 2
-guid: 27f8fe4b743eb69468d922e15af0028e
+guid: 06656d681ea42b749ae9799e302864b9
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ceiling
+    second: {fileID: 2100000, guid: 13561c2df9fa481458294ba1b0b7f1be, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: chair
+    second: {fileID: 2100000, guid: bc4298343ff7c3943bb9e9a50948cf4d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: curtain1
+    second: {fileID: 2100000, guid: 97b753796f17fc54aa2f70908f85eb67, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: floor
+    second: {fileID: 2100000, guid: dc4c835abe1e0524d80a201019af2800, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: light1
+    second: {fileID: 2100000, guid: adb34f396c5ee5f4ab4fdf2c3e5acec6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: light2
+    second: {fileID: 2100000, guid: 82dd07c93e51d8d409426e4c2b926ca4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: table
+    second: {fileID: 2100000, guid: 94e4ba7e90923e04bb1ff95e897febe7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: tube1
+    second: {fileID: 2100000, guid: 2d244b9bcd6624548b204493e9397241, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: tube2
+    second: {fileID: 2100000, guid: c2304f4562a99ea41b82ff8e5e775061, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

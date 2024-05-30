@@ -33,12 +33,12 @@ public class Module01AudioManager : MonoBehaviour
     {
         module_1a.OnModuleIntro.AddListener(() =>
         {
-            int index = 0; // TODO replace with corresponding index
+            int index = 10; // TODO replace with corresponding index
             StartCoroutine(PlayNarrationClipCoroutine(index));
         });
         module_1a.OnModuleStart.AddListener(() =>
         {
-            int index = 0; // TODO replace with corresponding index
+            int index = 9; // TODO replace with corresponding index
             StartCoroutine(PlayNarrationClipCoroutine(index));
         });
         
@@ -51,23 +51,23 @@ public class Module01AudioManager : MonoBehaviour
         });
         module_1b.OnModuleStart.AddListener(() =>
         {
-            int index = 0; // TODO replace with corresponding index
+            int index = 5; // TODO replace with corresponding index
             StartCoroutine(PlayNarrationClipCoroutine(index));
         });
         module_1b_QuizManager.OnResultSuccess.AddListener(() =>
         {
-            int index = 0; // TODO replace with corresponding index
+            int index = 3; // TODO replace with corresponding index
             StartCoroutine(PlayNarrationClipCoroutine(index));
         });
         module_1b_QuizManager.OnResultFailure.AddListener(() =>
         {
-            int index = 0; // TODO replace with corresponding index
+            int index = 4; // TODO replace with corresponding index
             StartCoroutine(PlayNarrationClipCoroutine(index));
         });
 
         module_1c.OnModuleIntro.AddListener(() =>   // happens right after 
         {
-            int index = 0; // TODO replace with corresponding index, auto spawns 1st equipment after VO complete
+            int index = 1; // TODO replace with corresponding index, auto spawns 1st equipment after VO complete
             StartCoroutine(PlayNarrationClipCoroutine(index, module_1c.StartModule));
         });
         
@@ -75,7 +75,7 @@ public class Module01AudioManager : MonoBehaviour
         
         module_1c.OnModuleEnd.AddListener(() => // when all equipment is placed
         {
-            int index = 0; // TODO replace with corresponding index
+            int index = 2; // TODO replace with corresponding index
             StartCoroutine(PlayNarrationClipCoroutine(index));
         });
     }

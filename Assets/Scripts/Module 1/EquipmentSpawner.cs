@@ -61,7 +61,7 @@ public class EquipmentSpawner : MonoBehaviour
         var currentEquipmentToSpawn = equipmentsToSpawn[index];
         
         currentEquipmentToSpawn.SetActive(true);
-        currentEquipmentToSpawn.transform.parent = null;    // unlink to ResetCanvasPosition.cs
+        
 
         currentEquipmentToSpawn.transform.position = mainCamera.transform.position +
                                                      mainCamera.transform.right * spawnOffsetFromCamera.x +
@@ -75,7 +75,12 @@ public class EquipmentSpawner : MonoBehaviour
         
         // replace spawn fx here
         currentEquipmentToSpawn.transform.localScale = Vector3.zero;
-        currentEquipmentToSpawn.transform.DOScale(Vector3.one, 0.1f);
+        currentEquipmentToSpawn.transform.DOScale(Vector3.one, 0.1f).OnComplete(() =>
+        {
+            currentEquipmentToSpawn.transform.parent = null;    // unlink to ResetCanvasPosition.cs
+        });
+
+        currentEquipmentToSpawn.transform.localScale = Vector3.one;
 
         if (index >= 0 && index < narrationAudioEvents.Count)
         {

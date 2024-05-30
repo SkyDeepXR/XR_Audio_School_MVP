@@ -900,7 +900,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   xlrSocket: {fileID: 1140937802595799756}
-  xlrSocketEvnetWrapper: {fileID: 4581702338842563507}
+  xlrSocketEvnetWrapper: {fileID: 3517258786989027390}
   connectedXlrCableEnd: {fileID: 0}
   connectedXlrSocket: {fileID: 0}
 --- !u!54 &9181693145420001882
@@ -3157,10 +3157,6 @@ PrefabInstance:
         type: 3}
       insertIndex: 1
       addedObject: {fileID: 407716939092885782}
-    - targetCorrespondingSourceObject: {fileID: 2375820835475906256, guid: 94d61cfbb6f631f4c877a5827f6b7d26,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 4581702338842563507}
   m_SourcePrefab: {fileID: 100100000, guid: 94d61cfbb6f631f4c877a5827f6b7d26, type: 3}
 --- !u!114 &1140937802595799756 stripped
 MonoBehaviour:
@@ -3172,6 +3168,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 06bd28341d3e86a4c8ab52b1a0269c7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3517258786989027390 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6121396989800494946, guid: 94d61cfbb6f631f4c877a5827f6b7d26,
+    type: 3}
+  m_PrefabInstance: {fileID: 7222720583839909724}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4955330046042397068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1464721f2283eb14e94a33e812b47be4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &4955330046042397068 stripped
@@ -3192,43 +3200,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e9be801073b64e43b47857ec5000ad7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &4581702338842563507
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4955330046042397068}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1464721f2283eb14e94a33e812b47be4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _interactableView: {fileID: 1140937802595799756}
-  _whenHover:
-    m_PersistentCalls:
-      m_Calls: []
-  _whenUnhover:
-    m_PersistentCalls:
-      m_Calls: []
-  _whenSelect:
-    m_PersistentCalls:
-      m_Calls: []
-  _whenUnselect:
-    m_PersistentCalls:
-      m_Calls: []
-  _whenInteractorViewAdded:
-    m_PersistentCalls:
-      m_Calls: []
-  _whenInteractorViewRemoved:
-    m_PersistentCalls:
-      m_Calls: []
-  _whenSelectingInteractorViewAdded:
-    m_PersistentCalls:
-      m_Calls: []
-  _whenSelectingInteractorViewRemoved:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!4 &9124744838718466508 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1917927677164695184, guid: 94d61cfbb6f631f4c877a5827f6b7d26,
