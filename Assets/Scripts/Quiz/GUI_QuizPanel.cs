@@ -15,6 +15,7 @@ public class GUI_QuizPanel : MonoBehaviour
     private const string QUESTION_TEXT_FORMAT = "Q. {0}";
 
     [SerializeField] private Transform answerOptionParent;
+    [SerializeField] private RectTransform quizLayoutGroup;
     [SerializeField] private GUI_QuizAnswerOption answerOptionPrefab;
     [SerializeField] private List<GUI_QuizAnswerOption> answerOptions;
     [SerializeField] private ToggleGroup answerOptionToggleGroup;
@@ -46,15 +47,17 @@ public class GUI_QuizPanel : MonoBehaviour
         questionText.text = string.Format(QUESTION_TEXT_FORMAT, quizQuestionData.question);
 
         ClearAnswerOptions();
-
-        AddAnswerOption(quizQuestionData.correctAnswer, true);
         
         foreach (var answer in quizQuestionData.wrongAnswers)
         {
             AddAnswerOption(answer, false);
         }
         
-        ShuffleAnswerOptions();
+        AddAnswerOption(quizQuestionData.correctAnswer, true);
+        
+        LayoutRebuilder.ForceRebuildLayoutImmediate(quizLayoutGroup);
+        
+        ShuffleAnswerOptions(quizQuestionData.correctAnswerIndex);
         SetToggleGroup();
         ToggleOffAllAnswerOptions();
 
@@ -87,12 +90,30 @@ public class GUI_QuizPanel : MonoBehaviour
     }
 
     [Button]
-    private void ShuffleAnswerOptions()
+    private void ShuffleAnswerOptions(int correctAnswerIndex)
     {
+        // foreach(var option in answerOptions)
+        // {
+        //     option.transform.SetSiblingIndex(Random.Range(0, answerOptions.Count));
+        // }
+
+        int indexCount = 0;
+        GUI_QuizAnswerOption correctAnswerOption = null;
+        
         foreach(var option in answerOptions)
         {
-            option.transform.SetSiblingIndex(Random.Range(0, answerOptions.Count));
+            if (option.IsCorrectAnswer)
+            {
+                correctAnswerOption = option;
+                continue;
+            }
+
+            option.transform.SetSiblingIndex(indexCount);
+            indexCount++;
+
         }
+        
+        correctAnswerOption.transform.SetSiblingIndex(correctAnswerIndex);
     }
 
     private void ToggleOffAllAnswerOptions()

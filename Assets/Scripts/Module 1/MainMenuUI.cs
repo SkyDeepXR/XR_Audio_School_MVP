@@ -89,6 +89,27 @@ public class MainMenuUI : MonoBehaviour
         // index must match narration event index in OnboardAudioManager.cs
         _onboardAudio.PlayNarrationClip(currentPageIndex, uiPages[currentPageIndex] == null ? GoToNextPage : null);
     }
+    
+    public void ShowPage(CanvasGroup canvasGroupToShow)
+    {
+        currentPageIndex = uiPages.IndexOf(canvasGroupToShow);
+
+        for (int i = 0; i < uiPages.Count; i++)
+        {
+            var uiPage = uiPages[i];
+            bool isCurrentPage = i == currentPageIndex;
+            if (uiPage== null)
+            {
+                continue;
+            }
+            uiPage.alpha = isCurrentPage ? 1 : 0;
+            uiPage.interactable = isCurrentPage;
+            uiPage.blocksRaycasts = isCurrentPage;
+        }
+        
+        // index must match narration event index in OnboardAudioManager.cs
+        _onboardAudio.PlayNarrationClip(currentPageIndex, uiPages[currentPageIndex] == null ? GoToNextPage : null);
+    }
 
     public void GoToModuleAndCloseMainMenu(int moduleIndex)
     {

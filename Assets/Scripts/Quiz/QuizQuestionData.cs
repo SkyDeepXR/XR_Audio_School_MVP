@@ -8,4 +8,5 @@ public class QuizQuestionData : ScriptableObject
     public string question;
     public string correctAnswer;
     public List<string> wrongAnswers;
+    public int correctAnswerIndex;
 }
