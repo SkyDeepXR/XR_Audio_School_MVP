@@ -8,17 +8,24 @@ using UnityEngine.Events;
 
 public class Cable : MonoBehaviour
 {
-    [Header("Male End")]
+    [Header("Male End")] 
+    [SerializeField] private GameObject maleEndMesh;
     [SerializeField] private SnapInteractor maleEndSnapInteractor;
     [SerializeField, ReadOnly] private SnapInteractable connectedMaleSocket;
     [SerializeField] private InteractorUnityEventWrapper eventWrapper_MaleEnd;
     
     [Header("Female End")]
+    [SerializeField] private GameObject femaleEndMesh;
     [SerializeField] private SnapInteractor femaleEndSnapInteractor;
     [SerializeField, ReadOnly] private SnapInteractable connectedFemaleSocket;
     [SerializeField] private InteractorUnityEventWrapper eventWrapper_FemaleEnd;
 
     public UnityEvent OnCableConnectionChanged;
+    
+    [Header("Cable Position Preset")]
+    [SerializeField] private bool presetCableEndPositions = false;
+    [SerializeField] private Transform maleEndPosition;
+    [SerializeField] private Transform femaleEndPosition;
     
     void Awake()
     {
@@ -43,6 +50,15 @@ public class Cable : MonoBehaviour
             connectedFemaleSocket = null;
             OnCableConnectionChanged?.Invoke();
         });
+    }
+
+    void Start()
+    {
+        if (presetCableEndPositions)
+        {
+            maleEndMesh.transform.position = maleEndPosition.position;
+            femaleEndMesh.transform.position = femaleEndPosition.position;
+        }
     }
 
     public SnapInteractable FindConnectingSnapInteractable(SnapInteractor socket)

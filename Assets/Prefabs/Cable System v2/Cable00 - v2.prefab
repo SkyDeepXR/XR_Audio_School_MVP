@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &269488280802463757
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1045227726210448899}
+  m_Layer: 0
+  m_Name: '[Male End Preset]'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1045227726210448899
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 269488280802463757}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.118, z: 0.318}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6496476218332727713}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2088004185399852111
 GameObject:
   m_ObjectHideFlags: 0
@@ -185,6 +216,37 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2862151228229980663}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3075246393451174381
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3123581635259226684}
+  m_Layer: 0
+  m_Name: '[Female End Preset]'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3123581635259226684
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3075246393451174381}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.114, z: 0.478}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6496476218332727713}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3185150087003169740
 GameObject:
@@ -508,6 +570,8 @@ Transform:
   - {fileID: 2862151228229980663}
   - {fileID: 6869017317959852875}
   - {fileID: 42874145700052103}
+  - {fileID: 1045227726210448899}
+  - {fileID: 3123581635259226684}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -75, z: 0}
 --- !u!114 &5341871183019947129
@@ -522,15 +586,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c51f16721af685f4184ea638dbd54d0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maleEndMesh: {fileID: 5910372171341676006}
   maleEndSnapInteractor: {fileID: 3780893673793348826}
   connectedMaleSocket: {fileID: 0}
   eventWrapper_MaleEnd: {fileID: 5607285567869120875}
+  femaleEndMesh: {fileID: 6749281252584406010}
   femaleEndSnapInteractor: {fileID: 5561555380817308649}
   connectedFemaleSocket: {fileID: 0}
   eventWrapper_FemaleEnd: {fileID: 2405947067915285441}
   OnCableConnectionChanged:
     m_PersistentCalls:
       m_Calls: []
+  presetCableEndPositions: 0
+  maleEndPosition: {fileID: 1045227726210448899}
+  femaleEndPosition: {fileID: 3123581635259226684}
 --- !u!1 &5393415101747715720
 GameObject:
   m_ObjectHideFlags: 0
