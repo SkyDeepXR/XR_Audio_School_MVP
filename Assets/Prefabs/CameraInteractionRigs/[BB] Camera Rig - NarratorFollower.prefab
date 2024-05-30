@@ -735,7 +735,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockId: 6b67162c-2460-4766-a931-980388647573
-  instanceId: 5b368b3f-5be4-450b-8b0a-40963ba8ffd6
+  instanceId: 81873807-6c74-4e17-83c1-8853e2b055a5
   version: 1
   installationRoutineCheckpoint:
     _installationRoutineId: 
@@ -1637,7 +1637,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockId: 5817f7c0-f2a5-45f9-a5ca-64264e0166e8
-  instanceId: d9ee5c5f-1bd0-4d24-b571-db601bdf59de
+  instanceId: 2346f74e-e7c3-4121-a629-3d1c21898e39
   version: 1
   installationRoutineCheckpoint:
     _installationRoutineId: 
@@ -2209,7 +2209,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockId: 5817f7c0-f2a5-45f9-a5ca-64264e0166e8
-  instanceId: 4c356983-0d39-4bb6-bb90-06c63c0561fb
+  instanceId: 9f46a8ac-01f0-482c-8576-c6cd1db5ed96
   version: 1
   installationRoutineCheckpoint:
     _installationRoutineId: 
@@ -10592,7 +10592,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockId: 8b26b298-7bf4-490e-b245-a039c0184303
-  instanceId: 3106f3d2-3065-47bd-83f3-81fee7d3ff95
+  instanceId: 97ec9024-d866-4aec-856d-c9aacb00892d
   version: 1
   installationRoutineCheckpoint:
     _installationRoutineId: 
@@ -11398,7 +11398,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockId: 6b67162c-2460-4766-a931-980388647573
-  instanceId: fee12f4c-68f0-4a50-8842-df2316b2d9f4
+  instanceId: b86eb5b6-c9b4-4900-a989-4a14a01e1a85
   version: 1
   installationRoutineCheckpoint:
     _installationRoutineId: 
@@ -13894,7 +13894,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockId: 81f55626-5fad-45e9-a1df-184f330da7ba
-  instanceId: b43d3632-be8c-4964-bd45-6a7427647741
+  instanceId: 96bb74ea-7608-4693-9f9f-cacf9268186e
   version: 1
   installationRoutineCheckpoint:
     _installationRoutineId: 
@@ -17866,7 +17866,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockId: f10154e0-16b2-492f-97d0-6639f69e7df6
-  instanceId: 399eeb1e-755a-4a5d-bc78-917626ca4a0f
+  instanceId: e6cc236f-d862-4e29-980d-9f5d6febbcac
   version: 1
   installationRoutineCheckpoint:
     _installationRoutineId: 
@@ -18444,7 +18444,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockId: e47682b9-c270-40b1-b16d-90b627a5ce1b
-  instanceId: a742e19b-4d43-4b95-8ab7-94773671130f
+  instanceId: ced16f9c-6dcb-4950-ae05-21b3a06ef9b9
   version: 1
   installationRoutineCheckpoint:
     _installationRoutineId: 
@@ -19153,7 +19153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockId: 316c5b1d-a5e4-49f2-a663-15fd22dbcba9
-  instanceId: 2b83d1a5-400b-4c32-a8a9-f70d581ad176
+  instanceId: ed72ef1f-c97a-4f24-a18f-b3247fb4276c
   version: 1
   installationRoutineCheckpoint:
     _installationRoutineId: 
@@ -22138,7 +22138,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockId: 316c5b1d-a5e4-49f2-a663-15fd22dbcba9
-  instanceId: 7336eab7-a071-47ad-93f2-499f3039c474
+  instanceId: e229a317-9189-4531-8ca1-705632a3f801
   version: 1
   installationRoutineCheckpoint:
     _installationRoutineId: 
@@ -26621,7 +26621,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockId: bc3f7b21-a55c-4cf7-b9c6-78d4341573a4
-  instanceId: 741200a5-6798-4472-92eb-e12c3a147317
+  instanceId: e6a19edc-ea76-48a6-8a75-a34702f3df0b
   version: 1
   installationRoutineCheckpoint:
     _installationRoutineId: 
@@ -28285,7 +28285,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockId: 8b26b298-7bf4-490e-b245-a039c0184303
-  instanceId: f6562426-4198-4d88-9ee0-e5825d5f19fa
+  instanceId: 1008856d-9494-4610-8d24-c2492d429169
   version: 1
   installationRoutineCheckpoint:
     _installationRoutineId: 
@@ -29507,7 +29507,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockId: bc3f7b21-a55c-4cf7-b9c6-78d4341573a4
-  instanceId: 577ea5f4-8520-47da-ba50-03cd5ed9b962
+  instanceId: 48ad28e3-3ca6-4f96-8d05-0d7fed1d665d
   version: 1
   installationRoutineCheckpoint:
     _installationRoutineId: 
@@ -30021,7 +30021,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockId: 0393ca30-f2a9-4865-a40f-f9a68d01c3a9
-  instanceId: 480dc2d5-efe7-45b9-947c-8c02d27d9a78
+  instanceId: 8199d9bd-0089-43dc-8446-2272686a7c8f
   version: 1
   installationRoutineCheckpoint:
     _installationRoutineId: 
@@ -30610,121 +30610,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6552610299133785753}
     m_Modifications:
-    - target: {fileID: 368928104748625958, guid: f7afaafa8ac826a43831e6ef0ba0823c,
-        type: 3}
-      propertyPath: _clipsModule01.Array.size
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 368928104748625958, guid: f7afaafa8ac826a43831e6ef0ba0823c,
-        type: 3}
-      propertyPath: _clipsModule01.Array.data[0]
-      value: 
-      objectReference: {fileID: 8300000, guid: febe171fb221c134fa87f9f6ec35238d, type: 3}
-    - target: {fileID: 368928104748625958, guid: f7afaafa8ac826a43831e6ef0ba0823c,
-        type: 3}
-      propertyPath: _clipsModule01.Array.data[1]
-      value: 
-      objectReference: {fileID: 8300000, guid: 9a6df8a8abeef8244b488c7272867832, type: 3}
-    - target: {fileID: 368928104748625958, guid: f7afaafa8ac826a43831e6ef0ba0823c,
-        type: 3}
-      propertyPath: _clipsModule01.Array.data[2]
-      value: 
-      objectReference: {fileID: 8300000, guid: adcbfa9976c4c564fb9ef21dea236fa5, type: 3}
-    - target: {fileID: 368928104748625958, guid: f7afaafa8ac826a43831e6ef0ba0823c,
-        type: 3}
-      propertyPath: _clipsModule01.Array.data[3]
-      value: 
-      objectReference: {fileID: 8300000, guid: 50001386311ff5442b618560ac903d88, type: 3}
-    - target: {fileID: 368928104748625958, guid: f7afaafa8ac826a43831e6ef0ba0823c,
-        type: 3}
-      propertyPath: _clipsModule01.Array.data[4]
-      value: 
-      objectReference: {fileID: 8300000, guid: 8f5c7f46eb496e14395cba550a10642f, type: 3}
-    - target: {fileID: 368928104748625958, guid: f7afaafa8ac826a43831e6ef0ba0823c,
-        type: 3}
-      propertyPath: _clipsModule01.Array.data[5]
-      value: 
-      objectReference: {fileID: 8300000, guid: ddfeaec6b338414459bc7805ec811f73, type: 3}
-    - target: {fileID: 368928104748625958, guid: f7afaafa8ac826a43831e6ef0ba0823c,
-        type: 3}
-      propertyPath: _clipsModule01.Array.data[6]
-      value: 
-      objectReference: {fileID: 8300000, guid: f6f297e86e5a3954ab079fd955535a6a, type: 3}
-    - target: {fileID: 368928104748625958, guid: f7afaafa8ac826a43831e6ef0ba0823c,
-        type: 3}
-      propertyPath: _clipsModule01.Array.data[7]
-      value: 
-      objectReference: {fileID: 8300000, guid: 172183ca01b206d48b4eb1526ddf5a82, type: 3}
-    - target: {fileID: 368928104748625958, guid: f7afaafa8ac826a43831e6ef0ba0823c,
-        type: 3}
-      propertyPath: _narrationAudioEvents.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 368928104748625958, guid: f7afaafa8ac826a43831e6ef0ba0823c,
-        type: 3}
-      propertyPath: _narrationAudioEvents.Array.data[0].audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: 50001386311ff5442b618560ac903d88, type: 3}
     - target: {fileID: 2632216209187842556, guid: f7afaafa8ac826a43831e6ef0ba0823c,
         type: 3}
       propertyPath: m_Name
       value: Narrator Sphere with Follower
       objectReference: {fileID: 0}
-    - target: {fileID: 5426332546724318679, guid: f7afaafa8ac826a43831e6ef0ba0823c,
-        type: 3}
-      propertyPath: _clipsModule01.Array.data[0]
-      value: 
-      objectReference: {fileID: 8300000, guid: e5f67686424d19343b5cfc65c1913de4, type: 3}
-    - target: {fileID: 5426332546724318679, guid: f7afaafa8ac826a43831e6ef0ba0823c,
-        type: 3}
-      propertyPath: _clipsModule01.Array.data[3]
-      value: 
-      objectReference: {fileID: 8300000, guid: 2bceb41bcbf2c7d429d0b04fd57881dd, type: 3}
-    - target: {fileID: 5426332546724318679, guid: f7afaafa8ac826a43831e6ef0ba0823c,
-        type: 3}
-      propertyPath: _clipsModule01.Array.data[4]
-      value: 
-      objectReference: {fileID: 8300000, guid: ca493ff1941f2d842a7c071fd3c77133, type: 3}
-    - target: {fileID: 5426332546724318679, guid: f7afaafa8ac826a43831e6ef0ba0823c,
-        type: 3}
-      propertyPath: _narrationAudioEvents.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5426332546724318679, guid: f7afaafa8ac826a43831e6ef0ba0823c,
-        type: 3}
-      propertyPath: _narrationAudioEvents.Array.data[0].audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: adcbfa9976c4c564fb9ef21dea236fa5, type: 3}
-    - target: {fileID: 5930372567092482882, guid: f7afaafa8ac826a43831e6ef0ba0823c,
-        type: 3}
-      propertyPath: _clipsModule01.Array.size
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 5930372567092482882, guid: f7afaafa8ac826a43831e6ef0ba0823c,
-        type: 3}
-      propertyPath: _clipsModule01.Array.data[4]
-      value: 
-      objectReference: {fileID: 8300000, guid: 4022f2c698561a44c87843db925ba6ce, type: 3}
-    - target: {fileID: 5930372567092482882, guid: f7afaafa8ac826a43831e6ef0ba0823c,
-        type: 3}
-      propertyPath: _clipsModule01.Array.data[5]
-      value: 
-      objectReference: {fileID: 8300000, guid: 5c6b762a7674e2646860d833f8d474cd, type: 3}
-    - target: {fileID: 5930372567092482882, guid: f7afaafa8ac826a43831e6ef0ba0823c,
-        type: 3}
-      propertyPath: _clipsModule01.Array.data[6]
-      value: 
-      objectReference: {fileID: 8300000, guid: 8f5c7f46eb496e14395cba550a10642f, type: 3}
-    - target: {fileID: 5930372567092482882, guid: f7afaafa8ac826a43831e6ef0ba0823c,
-        type: 3}
-      propertyPath: _narrationAudioEvents.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5930372567092482882, guid: f7afaafa8ac826a43831e6ef0ba0823c,
-        type: 3}
-      propertyPath: _narrationAudioEvents.Array.data[0].audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: adcbfa9976c4c564fb9ef21dea236fa5, type: 3}
     - target: {fileID: 6265572716677380774, guid: f7afaafa8ac826a43831e6ef0ba0823c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -30780,89 +30670,8 @@ PrefabInstance:
       propertyPath: playerHead
       value: 
       objectReference: {fileID: 6640885417695349738}
-    - target: {fileID: 8380083846330812902, guid: f7afaafa8ac826a43831e6ef0ba0823c,
-        type: 3}
-      propertyPath: _bgMusic
-      value: 
-      objectReference: {fileID: 8300000, guid: bc3520c9acd1af044b36d3a5976ab77e, type: 3}
-    - target: {fileID: 8380083846330812902, guid: f7afaafa8ac826a43831e6ef0ba0823c,
-        type: 3}
-      propertyPath: _onboardClips.Array.size
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 8380083846330812902, guid: f7afaafa8ac826a43831e6ef0ba0823c,
-        type: 3}
-      propertyPath: _onboardClips.Array.data[2]
-      value: 
-      objectReference: {fileID: 8300000, guid: 3a1a84abcf9e2d64eb3cafccdedcdd6a, type: 3}
-    - target: {fileID: 8380083846330812902, guid: f7afaafa8ac826a43831e6ef0ba0823c,
-        type: 3}
-      propertyPath: _onboardClips.Array.data[3]
-      value: 
-      objectReference: {fileID: 8300000, guid: 894d6944b57d2744fa75864e234129a9, type: 3}
-    - target: {fileID: 8380083846330812902, guid: f7afaafa8ac826a43831e6ef0ba0823c,
-        type: 3}
-      propertyPath: _onboardClips.Array.data[4]
-      value: 
-      objectReference: {fileID: 8300000, guid: 2bdbca54f11633a4390a3c9b98a7c946, type: 3}
-    - target: {fileID: 8380083846330812902, guid: f7afaafa8ac826a43831e6ef0ba0823c,
-        type: 3}
-      propertyPath: _onboardClips.Array.data[5]
-      value: 
-      objectReference: {fileID: 8300000, guid: a290656cce19fec47ad9eb90c2ac4834, type: 3}
-    - target: {fileID: 8380083846330812902, guid: f7afaafa8ac826a43831e6ef0ba0823c,
-        type: 3}
-      propertyPath: _onboardClips.Array.data[6]
-      value: 
-      objectReference: {fileID: 8300000, guid: a290656cce19fec47ad9eb90c2ac4834, type: 3}
-    - target: {fileID: 8380083846330812902, guid: f7afaafa8ac826a43831e6ef0ba0823c,
-        type: 3}
-      propertyPath: _narrationAudioEvents.Array.size
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 8380083846330812902, guid: f7afaafa8ac826a43831e6ef0ba0823c,
-        type: 3}
-      propertyPath: _narrationAudioEvents.Array.data[0].preDelay
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8380083846330812902, guid: f7afaafa8ac826a43831e6ef0ba0823c,
-        type: 3}
-      propertyPath: _narrationAudioEvents.Array.data[0].audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: dd8e3b5721d29e44bbff8b00530eb617, type: 3}
-    - target: {fileID: 8380083846330812902, guid: f7afaafa8ac826a43831e6ef0ba0823c,
-        type: 3}
-      propertyPath: _narrationAudioEvents.Array.data[1].audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: 2d1b573a3f34e9a42a4fefb671e93708, type: 3}
-    - target: {fileID: 8380083846330812902, guid: f7afaafa8ac826a43831e6ef0ba0823c,
-        type: 3}
-      propertyPath: _narrationAudioEvents.Array.data[2].audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: baf1ba7890a2d3b4da4a8b980b24335b, type: 3}
-    - target: {fileID: 8380083846330812902, guid: f7afaafa8ac826a43831e6ef0ba0823c,
-        type: 3}
-      propertyPath: _narrationAudioEvents.Array.data[3].audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: 894d6944b57d2744fa75864e234129a9, type: 3}
-    - target: {fileID: 8380083846330812902, guid: f7afaafa8ac826a43831e6ef0ba0823c,
-        type: 3}
-      propertyPath: _narrationAudioEvents.Array.data[4].audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: 2bdbca54f11633a4390a3c9b98a7c946, type: 3}
-    - target: {fileID: 8380083846330812902, guid: f7afaafa8ac826a43831e6ef0ba0823c,
-        type: 3}
-      propertyPath: _narrationAudioEvents.Array.data[5].audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: a290656cce19fec47ad9eb90c2ac4834, type: 3}
-    - target: {fileID: 8380083846330812902, guid: f7afaafa8ac826a43831e6ef0ba0823c,
-        type: 3}
-      propertyPath: _narrationAudioEvents.Array.data[6].audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: f80c6d9c66789f34cb73237125e21f86, type: 3}
     m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: 7130919776566591321, guid: f7afaafa8ac826a43831e6ef0ba0823c, type: 3}
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f7afaafa8ac826a43831e6ef0ba0823c, type: 3}
