@@ -33,56 +33,56 @@ public class Module02AudioManager : MonoBehaviour
         {
             // VO before asking user to connect mic to mixer for the 1st time
             
-            int index = 0; // TODO replace with corresponding index
+            int index = 2; // TODO replace with corresponding index
             StartCoroutine(PlayNarrationClipCoroutine(index));
         });
         module2Manager.OnTutorial1Event.AddListener(() =>
         {
             // VO when asking user to connect cable to mic
             
-            int index = 0; // TODO replace with corresponding index
+            int index = 3; // TODO replace with corresponding index
             StartCoroutine(PlayNarrationClipCoroutine(index));
         });
         module2Manager.OnTutorial2IntroEvent.AddListener(() =>
         {
             // VO when user successfully connected cable to mic
             
-            int index = 0; // TODO replace with corresponding index
+            int index = 8; // TODO replace with corresponding index
             StartCoroutine(PlayNarrationClipCoroutine(index, module2Manager.GoToNextGameState));
         });
         module2Manager.OnTutorial2Event.AddListener(() =>
         {
             // VO when asking user to connect cable to mixer
             
-            int index = 0; // TODO replace with corresponding index
+            int index = 3; // TODO replace with corresponding index
             StartCoroutine(PlayNarrationClipCoroutine(index));
         });
         module2Manager.OnTaskIntroEvent.AddListener(() =>
         {
             // VO when user successfully connected cable to mixer and before proceeding to self-connecting task with mic & speakers
             
-            int index = 0; // TODO replace with corresponding index
+            int index = 9; // TODO replace with corresponding index
             StartCoroutine(PlayNarrationClipCoroutine(index, module2Manager.GoToNextGameState));
         });
         module2Manager.OnTaskStartEvent.AddListener(() =>
         {
             // VO when user is prompted to connect all equipment based on given diagram
             
-            int index = 0; // TODO replace with corresponding index
+            int index = 5; // TODO replace with corresponding index
             StartCoroutine(PlayNarrationClipCoroutine(index));
         });
         module2Manager.OnTaskFailedEvent.AddListener(() =>
         {
             // VO when user fails to connect all equipment based on given diagram
             
-            int index = 0; // TODO replace with corresponding index
+            int index = 5; // TODO replace with corresponding index
             StartCoroutine(PlayNarrationClipCoroutine(index));
         });
         module2Manager.OnTaskFinishedEvent.AddListener(() =>
         {
             // VO when user successfully connects all equipment and completing module 2
             
-            int index = 0; // TODO replace with corresponding index
+            int index = 10; // TODO replace with corresponding index
             StartCoroutine(PlayNarrationClipCoroutine(index));
         });
     }

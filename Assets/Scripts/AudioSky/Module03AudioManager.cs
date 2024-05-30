@@ -2,6 +2,9 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
+using SonicBloom.Koreo;
+using SonicBloom.Koreo.Players;
 
 public class Module03AudioManager : MonoBehaviour
 {
@@ -15,52 +18,63 @@ public class Module03AudioManager : MonoBehaviour
     [SerializeField] private AudioSource _sourceModule01;
     [SerializeField] AudioClip[] _clipsModule01;  // Audio clips for Module One Voiceover
     [SerializeField] private NarrationAudioEvent[] _narrationAudioEvents;
+    [Space] 
+    [SerializeField] private AudioSource _gigRevealSource;
     
     private bool _audioSkipped = true;
+    [Space]
+    [SerializeField] MultiMusicPlayer _multiMusicPlayer;
 
     private void Start()
     {
         module3Manager.OnIntroEvent.AddListener(() =>
         {
             // happens when wall is cracking
+            _gigRevealSource.Play(0); // Plays from a different 2D audio source
             
-            int index = 0; // TODO replace with corresponding index
-            StartCoroutine(PlayNarrationClipCoroutine(index));
+           // int index = 0; // TODO replace with corresponding index
+            //StartCoroutine(PlayNarrationClipCoroutine(index));
         });
         module3Manager.OnTransitionedToVREvent.AddListener(() =>
         {
             // happens when user teleports outside MRUK room
             
             int index = 0; // TODO replace with corresponding index
-            StartCoroutine(PlayNarrationClipCoroutine(index));
+            StartCoroutine(PlayNarrationClipCoroutine(3));
         });
         module3Manager.OnTaskStartEvent.AddListener(() =>
         {
             // happens when user teleports near mixer table
             
-            int index = 0; // TODO replace with corresponding index
+            int index = 1; // TODO replace with corresponding index
             StartCoroutine(PlayNarrationClipCoroutine(index));
         });
         module3Manager.OnTaskFailedEvent.AddListener(() =>
         {
             // happens when user fails to connect all required connections properly
             
-            int index = 0; // TODO replace with corresponding index
+            int index = 6; // TODO replace with corresponding index
             StartCoroutine(PlayNarrationClipCoroutine(index));
         });
         module3Manager.OnTaskFinishedEvent.AddListener(() =>
         {
             // happens when user successfully connects all required connections, and about to start performance
             
-            int index = 0; // TODO replace with corresponding index
+            int index = 4; // TODO replace with corresponding index
             StartCoroutine(PlayNarrationClipCoroutine(index));
+            
+            
         });
         module3Manager.OnPerformanceStartEvent.AddListener(() =>
         {
             // happens when performance starts
             
-            int index = 0; // TODO replace with corresponding index
-            StartCoroutine(PlayNarrationClipCoroutine(index));
+            int index = 2; // TODO replace with corresponding index
+            StartCoroutine(PlayNarrationClipCoroutine(2));  // This VO tells player to press button for band to start.
+            
+            // PLAYER MUST PRESS BUTTON FOR BAND TO START PLAYING or can begin with method below.
+            //_multiMusicPlayer.Play(); // Band starts playing with this call. Either we call here OR with event.
+            
         });
     }
     

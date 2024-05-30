@@ -16736,6 +16736,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4980203340055068937}
   - component: {fileID: 6728626743253260748}
+  - component: {fileID: 8728564760757995657}
   m_Layer: 0
   m_Name: LeftEyeAnchor
   m_TagString: MainCamera
@@ -16809,6 +16810,50 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!114 &8728564760757995657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5090549084473190886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_AllowHDROutput: 1
+  m_UseScreenCoordOverride: 0
+  m_ScreenSizeOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_ScreenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
+  m_TaaSettings:
+    quality: 3
+    frameInfluence: 0.1
+    jitterScale: 1
+    mipBias: 0
+    varianceClampScale: 0.9
+    contrastAdaptiveSharpening: 0
 --- !u!1 &5143482609569586466
 GameObject:
   m_ObjectHideFlags: 0
@@ -30627,6 +30672,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5426332546724318679, guid: f7afaafa8ac826a43831e6ef0ba0823c,
         type: 3}
+      propertyPath: _clipsModule01.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: e5f67686424d19343b5cfc65c1913de4, type: 3}
+    - target: {fileID: 5426332546724318679, guid: f7afaafa8ac826a43831e6ef0ba0823c,
+        type: 3}
+      propertyPath: _clipsModule01.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: 2bceb41bcbf2c7d429d0b04fd57881dd, type: 3}
+    - target: {fileID: 5426332546724318679, guid: f7afaafa8ac826a43831e6ef0ba0823c,
+        type: 3}
+      propertyPath: _clipsModule01.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: ca493ff1941f2d842a7c071fd3c77133, type: 3}
+    - target: {fileID: 5426332546724318679, guid: f7afaafa8ac826a43831e6ef0ba0823c,
+        type: 3}
       propertyPath: _narrationAudioEvents.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -30635,6 +30695,26 @@ PrefabInstance:
       propertyPath: _narrationAudioEvents.Array.data[0].audioClip
       value: 
       objectReference: {fileID: 8300000, guid: adcbfa9976c4c564fb9ef21dea236fa5, type: 3}
+    - target: {fileID: 5930372567092482882, guid: f7afaafa8ac826a43831e6ef0ba0823c,
+        type: 3}
+      propertyPath: _clipsModule01.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5930372567092482882, guid: f7afaafa8ac826a43831e6ef0ba0823c,
+        type: 3}
+      propertyPath: _clipsModule01.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: 4022f2c698561a44c87843db925ba6ce, type: 3}
+    - target: {fileID: 5930372567092482882, guid: f7afaafa8ac826a43831e6ef0ba0823c,
+        type: 3}
+      propertyPath: _clipsModule01.Array.data[5]
+      value: 
+      objectReference: {fileID: 8300000, guid: 5c6b762a7674e2646860d833f8d474cd, type: 3}
+    - target: {fileID: 5930372567092482882, guid: f7afaafa8ac826a43831e6ef0ba0823c,
+        type: 3}
+      propertyPath: _clipsModule01.Array.data[6]
+      value: 
+      objectReference: {fileID: 8300000, guid: 8f5c7f46eb496e14395cba550a10642f, type: 3}
     - target: {fileID: 5930372567092482882, guid: f7afaafa8ac826a43831e6ef0ba0823c,
         type: 3}
       propertyPath: _narrationAudioEvents.Array.size
