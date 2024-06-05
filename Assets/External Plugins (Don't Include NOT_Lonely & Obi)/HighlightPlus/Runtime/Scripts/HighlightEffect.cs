@@ -1346,7 +1346,6 @@ namespace HighlightPlus {
                 if (smoothRTHeight <= 0) {
                     smoothRTHeight = 1;
                 }
-#if ENABLE_VR_MODULE
                 if (VRCheck.isVrRunning) {
 #if UNITY_2022_3_OR_NEWER
                     if (Application.platform == RuntimePlatform.Android) {
@@ -1366,7 +1365,6 @@ namespace HighlightPlus {
                     }
 #endif
                 } else
-#endif
                 {
                     sourceDesc = new RenderTextureDescriptor(smoothRTWidth, smoothRTHeight);
                     sourceDesc.volumeDepth = 1;
@@ -2738,6 +2736,7 @@ namespace HighlightPlus {
                             if (fxMat != null) {
                                 fxMat.color = glowHQColor;
                                 fxMat.SetInt(ShaderParams.Cull, cullBackFaces ? (int)CullMode.Back : (int)CullMode.Off);
+                                fxMat.SetFloat(ShaderParams.Padding, padding);
                                 fxMat.SetFloat(ShaderParams.OutlineEdgeThreshold, outlineEdgeThreshold);
                                 //if (hasTexture) {
                                 fxMat.mainTexture = matTexture;

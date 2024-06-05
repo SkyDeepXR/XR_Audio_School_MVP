@@ -2,59 +2,63 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Serialization;
 using UnityEngine.XR;
+using Meta.XR.MRUtilityKit;  // Ensure this namespace includes your ObjectModifier class
 
 public class PassthroughViewToggle : MonoBehaviour
 {
-    // References to the game objects that need to be disabled/enabled
     [SerializeField]
     private GameObject[] virtualEnvironmentObjects;
 
-    // Reference to the OVR Passthrough Layer component
     [SerializeField]
     private OVRPassthroughLayer passthroughLayer;
-    
-    // The float parameter to be adjusted on the passthrough component
+
     [SerializeField]
     private float passthroughAlpha = 1.0f;
 
-    // A flag to check if passthrough view is enabled
     private bool isPassthroughEnabled = true;
+
+    // Reference to ObjectModifier component
+    [SerializeField]
+    private RoomObjectModifier objectModifier;
 
     void Start()
     {
-        // Initialize the passthrough layer opacity based on the initial state
         passthroughLayer.textureOpacity = passthroughAlpha;
         Debug.Log($"Start: PassthroughLayer textureOpacity initialized to {passthroughLayer.textureOpacity}");
     }
 
-    // Function to toggle between passthrough view and virtual environment
     public void ToggleView()
     {
         Debug.Log("ToggleView called");
         isPassthroughEnabled = !isPassthroughEnabled;
         Debug.Log($"isPassthroughEnabled set to {isPassthroughEnabled}");
 
-        // Toggle the game objects
         foreach (var obj in virtualEnvironmentObjects)
         {
-            Debug.Log($"Setting {obj.name} active state to {!isPassthroughEnabled}");
             obj.SetActive(!isPassthroughEnabled);
         }
 
-        // Adjust the float parameter on the passthrough component
         passthroughLayer.textureOpacity = isPassthroughEnabled ? passthroughAlpha : 0.0f;
-        Debug.Log($"PassthroughLayer textureOpacity set to {passthroughLayer.textureOpacity}");
+
+        // Toggle Mesh Renderers based on the passthrough state
+        if (objectModifier != null)
+        {
+            objectModifier.ToggleMeshRenderersInMRUKRoom(!isPassthroughEnabled);
+        }
+        else
+        {
+            Debug.LogError("ObjectModifier component not found. Make sure it is attached to this GameObject or assigned.");
+        }
     }
 
     void Update()
     {
-        // Check if the Y button (Button.Four) is pressed
         if (OVRInput.GetDown(OVRInput.Button.Four))
         {
-            Debug.Log("PassThrough Toggle button pressed. aka Button Number Four as in 4!");
+            Debug.Log("PassThrough Toggle button pressed.");
             ToggleView();
         }
     }
+
 }

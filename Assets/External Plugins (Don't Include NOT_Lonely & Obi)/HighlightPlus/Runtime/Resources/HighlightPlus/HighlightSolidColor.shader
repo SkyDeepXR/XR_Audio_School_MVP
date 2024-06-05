@@ -6,6 +6,7 @@ Properties {
     _Cull ("Cull Mode", Int) = 2
 	_ZTest("ZTest", Int) = 4
     _EdgeThreshold("Edge Threshold", Float) = 0.995
+    _Padding("Padding", Float) = 0
 }
     SubShader
     {
@@ -14,6 +15,7 @@ Properties {
         // Compose effect on camera target
         Pass
         {
+            Name "Solid Color"
             ZWrite Off
             Cull [_Cull]
 			ZTest Always
@@ -40,6 +42,7 @@ Properties {
 	        #endif
 
       		float4 _MainTex_ST;
+            float _Padding;
             fixed _CutOff;
             fixed4 _Color;
 
@@ -69,6 +72,7 @@ Properties {
 				UNITY_INITIALIZE_OUTPUT(v2f, o);
                 UNITY_TRANSFER_INSTANCE_ID(v, o);
 				UNITY_INITIALIZE_VERTEX_OUTPUT_STEREO(o);
+                v.vertex.xyz *= 1.0 + _Padding;
 				o.pos = ComputeVertexPosition(v.vertex);
 				o.uv = TRANSFORM_TEX (v.uv, _MainTex);
                 o.scrPos = ComputeScreenPos(o.pos);
