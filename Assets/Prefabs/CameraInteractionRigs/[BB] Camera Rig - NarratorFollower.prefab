@@ -30931,6 +30931,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 9146738470740362334}
     m_Modifications:
+    - target: {fileID: 775181155582310787, guid: 424c2298facd2bf419beffd69e8cc855,
+        type: 3}
+      propertyPath: _handVisual
+      value: 
+      objectReference: {fileID: 1635723624460032303}
+    - target: {fileID: 775181155582310787, guid: 424c2298facd2bf419beffd69e8cc855,
+        type: 3}
+      propertyPath: _handRenderer
+      value: 
+      objectReference: {fileID: 3288863600374185630}
+    - target: {fileID: 775181155582310787, guid: 424c2298facd2bf419beffd69e8cc855,
+        type: 3}
+      propertyPath: _materialEditor
+      value: 
+      objectReference: {fileID: 1107451476619356118}
+    - target: {fileID: 2825309942594846844, guid: 424c2298facd2bf419beffd69e8cc855,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4977421493488092299, guid: 424c2298facd2bf419beffd69e8cc855,
         type: 3}
       propertyPath: m_IsActive
@@ -31001,6 +31021,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5903181773383361112, guid: 424c2298facd2bf419beffd69e8cc855,
+        type: 3}
+      propertyPath: _syntheticHand
+      value: 
+      objectReference: {fileID: 7442733194845120820}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -33731,6 +33756,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6785586754793049302}
     m_Modifications:
+    - target: {fileID: 775181155582310787, guid: 424c2298facd2bf419beffd69e8cc855,
+        type: 3}
+      propertyPath: _handVisual
+      value: 
+      objectReference: {fileID: 1990104954570937931}
+    - target: {fileID: 775181155582310787, guid: 424c2298facd2bf419beffd69e8cc855,
+        type: 3}
+      propertyPath: _handRenderer
+      value: 
+      objectReference: {fileID: 5004963347934324898}
+    - target: {fileID: 775181155582310787, guid: 424c2298facd2bf419beffd69e8cc855,
+        type: 3}
+      propertyPath: _materialEditor
+      value: 
+      objectReference: {fileID: 6732284865131442664}
+    - target: {fileID: 2825309942594846844, guid: 424c2298facd2bf419beffd69e8cc855,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4977421493488092299, guid: 424c2298facd2bf419beffd69e8cc855,
         type: 3}
       propertyPath: m_IsActive
@@ -33801,6 +33846,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5903181773383361112, guid: 424c2298facd2bf419beffd69e8cc855,
+        type: 3}
+      propertyPath: _syntheticHand
+      value: 
+      objectReference: {fileID: 300126674789818056}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

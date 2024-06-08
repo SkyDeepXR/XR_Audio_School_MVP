@@ -1493,17 +1493,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1535439155145818297}
-        m_TargetAssemblyTypeName: UnityEngine.Collider, UnityEngine
-        m_MethodName: set_enabled
-        m_Mode: 6
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: RoomObjectModifier, Assembly-CSharp
+        m_MethodName: GetRoomObjectAndDestroy
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 1
+          m_BoolArgument: 0
         m_CallState: 2
   OnTaskStartEvent:
     m_PersistentCalls:
@@ -10700,6 +10700,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 359683284541124699, guid: db57dc689bb8f894c983be79cc9524b5,
+        type: 3}
+      propertyPath: delays
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 4067851918894201667, guid: db57dc689bb8f894c983be79cc9524b5,
         type: 3}
       propertyPath: clip
@@ -10709,6 +10714,11 @@ PrefabInstance:
         type: 3}
       propertyPath: volume
       value: 0.545
+      objectReference: {fileID: 0}
+    - target: {fileID: 4067851918894201667, guid: db57dc689bb8f894c983be79cc9524b5,
+        type: 3}
+      propertyPath: destroyRadius
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 4616761995220129516, guid: db57dc689bb8f894c983be79cc9524b5,
         type: 3}
@@ -10720,6 +10730,11 @@ PrefabInstance:
       propertyPath: volume
       value: 0.432
       objectReference: {fileID: 0}
+    - target: {fileID: 4616761995220129516, guid: db57dc689bb8f894c983be79cc9524b5,
+        type: 3}
+      propertyPath: destroyRadius
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5135522777807010920, guid: db57dc689bb8f894c983be79cc9524b5,
         type: 3}
       propertyPath: clip
@@ -10730,6 +10745,11 @@ PrefabInstance:
       propertyPath: volume
       value: 0.416
       objectReference: {fileID: 0}
+    - target: {fileID: 5135522777807010920, guid: db57dc689bb8f894c983be79cc9524b5,
+        type: 3}
+      propertyPath: destroyRadius
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7656132598150199594, guid: db57dc689bb8f894c983be79cc9524b5,
         type: 3}
       propertyPath: clip
@@ -10739,6 +10759,11 @@ PrefabInstance:
         type: 3}
       propertyPath: volume
       value: 0.535
+      objectReference: {fileID: 0}
+    - target: {fileID: 7656132598150199594, guid: db57dc689bb8f894c983be79cc9524b5,
+        type: 3}
+      propertyPath: destroyRadius
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 7749628430411858249, guid: db57dc689bb8f894c983be79cc9524b5,
         type: 3}
@@ -11507,6 +11532,18 @@ MeshRenderer:
     type: 3}
   m_PrefabInstance: {fileID: 6344987851236281228}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &2587339706705465817 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8927822298273733205, guid: 61223d29125be61478487fa2a3af915f,
+    type: 3}
+  m_PrefabInstance: {fileID: 6344987851236281228}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &3633451552452127703 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7665531438487019611, guid: 61223d29125be61478487fa2a3af915f,
+    type: 3}
+  m_PrefabInstance: {fileID: 6344987851236281228}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4799284391033382078 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1916166659643846450, guid: 61223d29125be61478487fa2a3af915f,
@@ -11519,9 +11556,33 @@ MeshRenderer:
     type: 3}
   m_PrefabInstance: {fileID: 6344987851236281228}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &4992324738263691353 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2109268142512520149, guid: 61223d29125be61478487fa2a3af915f,
+    type: 3}
+  m_PrefabInstance: {fileID: 6344987851236281228}
+  m_PrefabAsset: {fileID: 0}
 --- !u!23 &5275978273633962855 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 1240150831101772011, guid: 61223d29125be61478487fa2a3af915f,
+    type: 3}
+  m_PrefabInstance: {fileID: 6344987851236281228}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &6558233720493398188 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 220230011140231968, guid: 61223d29125be61478487fa2a3af915f,
+    type: 3}
+  m_PrefabInstance: {fileID: 6344987851236281228}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &7074844228567498663 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4189202532836799531, guid: 61223d29125be61478487fa2a3af915f,
+    type: 3}
+  m_PrefabInstance: {fileID: 6344987851236281228}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8585286804800031026 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3398243038058758846, guid: 61223d29125be61478487fa2a3af915f,
     type: 3}
   m_PrefabInstance: {fileID: 6344987851236281228}
   m_PrefabAsset: {fileID: 0}
@@ -11591,6 +11652,41 @@ PrefabInstance:
     - target: {fileID: 3853475185480270403, guid: c15bab12e5dd12845aaa70a84657d194,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6890787873624835839, guid: c15bab12e5dd12845aaa70a84657d194,
+        type: 3}
+      propertyPath: volumeFaders.Array.data[0].faderTransform
+      value: 
+      objectReference: {fileID: 2587339706705465817}
+    - target: {fileID: 6890787873624835839, guid: c15bab12e5dd12845aaa70a84657d194,
+        type: 3}
+      propertyPath: volumeFaders.Array.data[1].faderTransform
+      value: 
+      objectReference: {fileID: 8585286804800031026}
+    - target: {fileID: 6890787873624835839, guid: c15bab12e5dd12845aaa70a84657d194,
+        type: 3}
+      propertyPath: volumeFaders.Array.data[2].faderTransform
+      value: 
+      objectReference: {fileID: 3633451552452127703}
+    - target: {fileID: 6890787873624835839, guid: c15bab12e5dd12845aaa70a84657d194,
+        type: 3}
+      propertyPath: volumeFaders.Array.data[3].faderTransform
+      value: 
+      objectReference: {fileID: 6558233720493398188}
+    - target: {fileID: 6890787873624835839, guid: c15bab12e5dd12845aaa70a84657d194,
+        type: 3}
+      propertyPath: volumeFaders.Array.data[4].faderTransform
+      value: 
+      objectReference: {fileID: 7074844228567498663}
+    - target: {fileID: 6890787873624835839, guid: c15bab12e5dd12845aaa70a84657d194,
+        type: 3}
+      propertyPath: volumeFaders.Array.data[5].faderTransform
+      value: 
+      objectReference: {fileID: 4992324738263691353}
+    - target: {fileID: 8936927551579225764, guid: c15bab12e5dd12845aaa70a84657d194,
+        type: 3}
+      propertyPath: autoPlayOnAwake
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

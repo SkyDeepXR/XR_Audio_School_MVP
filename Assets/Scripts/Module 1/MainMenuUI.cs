@@ -19,6 +19,7 @@ public class MainMenuUI : MonoBehaviour
     [Header("AUDIO MANAGERS")] 
     [SerializeField] private OnboardAudioManager _onboardAudio;
     
+    [SerializeField] private float bgmDelay = 3f; // Default delay of 3 seconds
     
     
     
@@ -28,9 +29,15 @@ public class MainMenuUI : MonoBehaviour
         
         ShowPage(0);
         
-        _onboardAudio.PlayBGM();  // play BGM but need logic to fade out music at the end of onboarding.
+        Invoke(nameof(PlayBGMWithDelay), bgmDelay);
         
         //Invoke(nameof(GoToNextPage), 3f);
+    }
+    
+    private void PlayBGMWithDelay()
+    {
+        _onboardAudio.PlayBGM();
+        // Add any additional logic here
     }
 
     void Update()
