@@ -861,6 +861,7 @@ GameObject:
   - component: {fileID: 7628325571263374486}
   - component: {fileID: 504876422207987771}
   - component: {fileID: 2121967404090826273}
+  - component: {fileID: 318816746070457796}
   - component: {fileID: 4351514223278423583}
   - component: {fileID: 3579320077235017002}
   m_Layer: 0
@@ -1154,6 +1155,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!65 &318816746070457796
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2952466637818104035}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.20146206, y: 0.28869724, z: 0.2383694}
+  m_Center: {x: -0.000000011175871, y: 0.14427364, z: 0.0016775429}
 --- !u!114 &4351514223278423583
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1169,7 +1191,7 @@ MonoBehaviour:
   thickness: 0
   material: {fileID: 11400000, guid: d368f2c47473d4bfb8dd9f08073cb403, type: 2}
   filter: -65535
-  m_SourceCollider: {fileID: 3016607814187411836}
+  m_SourceCollider: {fileID: 318816746070457796}
   m_DistanceField: {fileID: 0}
 --- !u!114 &3579320077235017002
 MonoBehaviour:
