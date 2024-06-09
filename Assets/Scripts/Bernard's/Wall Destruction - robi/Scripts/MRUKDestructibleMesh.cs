@@ -33,7 +33,10 @@ namespace BlackWhale.DestructibleMeshSystem
             foreach (Transform tr in allTransforms)
             {
                 // Check if the GameObject's name contains "CEILING_EffectMesh" or "WALL_FACE_EffectMesh"
-                if (tr.name.ToLower().Contains("ceiling_effectmesh") || tr.name.ToLower().Contains("wall_face_effectmesh"))
+                if (tr.name.ToLower().Contains("ceiling_effectmesh") || tr.name.ToLower().Contains("wall_face_effectmesh") 
+                                                                     || tr.name.ToLower().Contains("door_frame_effectmesh")
+                                                                     || tr.name.ToLower().Contains("wall_art_effectmesh")
+                                                                     || tr.name.ToLower().Contains("window_frame_effectmesh"))
                 {
                     // Add the MRUKDestroyWalls component to the GameObject
                     tr.gameObject.AddComponent<MRUKDestroyWalls>();

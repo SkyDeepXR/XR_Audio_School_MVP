@@ -88,7 +88,7 @@ public class Module1A_Cable : MonoBehaviour
         else
         {
             onDeactivated?.Invoke();
-            cableGroup.transform.DOLocalRotateQuaternion(cableGroupOriginalRot, 0.5f);
+            cableGroup.transform.DOLocalRotateQuaternion(cableGroupOriginalRot, 0.05f);
         }
     }
 

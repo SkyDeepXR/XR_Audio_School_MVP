@@ -97,8 +97,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f60e7decfa6f4c149a1bcd689a01be3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gridRows: 3
-  gridColumns: 3
+  gridRows: 5
+  gridColumns: 5
   includeEdgeSites: 1
   showGizmos: 1
   applyExclusionArea: 0

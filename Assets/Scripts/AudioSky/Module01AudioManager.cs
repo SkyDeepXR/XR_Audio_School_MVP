@@ -33,13 +33,13 @@ public class Module01AudioManager : MonoBehaviour
     {
         module_1a.OnModuleIntro.AddListener(() =>
         {
-            int index = 10; // TODO replace with corresponding index
-            StartCoroutine(PlayNarrationClipCoroutine(index));
+            int index = 7; // TODO replace with corresponding index
+            StartCoroutine(PlayNarrationClipCoroutine(index));  // Tells player what they will learn.
         });
         module_1a.OnModuleStart.AddListener(() =>
         {
-            int index = 9; // TODO replace with corresponding index
-            StartCoroutine(PlayNarrationClipCoroutine(index));
+            int index = 6; // TODO replace with corresponding index
+            StartCoroutine(PlayNarrationClipCoroutine(index));  // Tells player how to interact with the display.
         });
         
         // TODO edit narration event for all Module1A_Cable list objects in Module1A_Manager.cs
@@ -56,7 +56,7 @@ public class Module01AudioManager : MonoBehaviour
         });
         module_1b_QuizManager.OnResultSuccess.AddListener(() =>
         {
-            int index = 3; // TODO replace with corresponding index
+            int index = 2; // TODO replace with corresponding index
             StartCoroutine(PlayNarrationClipCoroutine(index));
         });
         module_1b_QuizManager.OnResultFailure.AddListener(() =>
