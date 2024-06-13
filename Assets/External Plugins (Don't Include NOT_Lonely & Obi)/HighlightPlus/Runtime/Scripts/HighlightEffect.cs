@@ -12,6 +12,7 @@ namespace HighlightPlus {
 
     public delegate bool OnObjectHighlightEvent(GameObject obj);
     public delegate bool OnObjectHighlightStateEvent(GameObject obj, bool state);
+    public delegate bool OnObjectSelectionEvent(GameObject obj);
     public delegate bool OnRendererHighlightEvent(Renderer renderer);
 
     /// <summary>
@@ -372,6 +373,8 @@ namespace HighlightPlus {
         public float targetFXStayDuration = 1.5f;
         public Visibility targetFXVisibility = Visibility.AlwaysOnTop;
 
+        public event OnObjectSelectionEvent OnObjectSelected;
+        public event OnObjectSelectionEvent OnObjectUnSelected;
         public event OnObjectHighlightEvent OnObjectHighlightStart;
         public event OnObjectHighlightEvent OnObjectHighlightEnd;
         public event OnObjectHighlightStateEvent OnObjectHighlightStateChange;
@@ -491,6 +494,11 @@ namespace HighlightPlus {
             get { return _isSelected; }
             set {
                 if (_isSelected != value) {
+                    if (value) {
+                        if (OnObjectSelected != null) OnObjectSelected(gameObject);
+                    } else {
+                        if (OnObjectUnSelected != null) OnObjectUnSelected(gameObject);
+                    }
                     _isSelected = value;
                     if (_isSelected) lastSelected = this;
                 }
@@ -677,12 +685,7 @@ namespace HighlightPlus {
 
         void OnDisable() {
             UpdateMaterialProperties();
-            if (effects != null) {
-                int k = effects.IndexOf(this);
-                if (k >= 0) {
-                    effects.RemoveAt(k);
-                }
-            }
+            RemoveEffect();
         }
 
         void Reset() {
@@ -700,7 +703,17 @@ namespace HighlightPlus {
             }
         }
 
+        void RemoveEffect() {
+            if (effects != null) {
+                int k = effects.IndexOf(this);
+                if (k >= 0) {
+                    effects.RemoveAt(k);
+                }
+            }
+        }
+
         void OnDestroy() {
+            RemoveEffect();
             if (rms != null) {
                 for (int k = 0; k < rms.Length; k++) {
                     DestroyMaterialArray(rms[k].fxMatMask);
@@ -811,9 +824,10 @@ namespace HighlightPlus {
             cbHighlightEmpty = false;
         }
 
-        public CommandBuffer BuildCommandBuffer(Camera cam, RenderTargetIdentifier colorAttachmentBuffer, RenderTargetIdentifier depthAttachmentBuffer, bool clearStencil) {
+        public CommandBuffer BuildCommandBuffer(Camera cam, RenderTargetIdentifier colorAttachmentBuffer, RenderTargetIdentifier depthAttachmentBuffer, bool clearStencil, ref RenderTextureDescriptor sourceDesc) {
             this.colorAttachmentBuffer = colorAttachmentBuffer;
             this.depthAttachmentBuffer = depthAttachmentBuffer;
+            this.sourceDesc = sourceDesc;
             BuildCommandBuffer(cam, clearStencil);
             return cbHighlightEmpty ? null : cbHighlight;
         }
@@ -1338,41 +1352,47 @@ namespace HighlightPlus {
             if (useSmoothBlend && _highlighted && somePartVisible) {
 
                 // Prepare smooth outer glow / outline target
-                int smoothRTWidth = cam.pixelWidth;
-                if (smoothRTWidth <= 0) {
-                    smoothRTWidth = 1;
-                }
-                int smoothRTHeight = cam.pixelHeight;
-                if (smoothRTHeight <= 0) {
-                    smoothRTHeight = 1;
-                }
-                if (VRCheck.isVrRunning) {
-#if UNITY_2022_3_OR_NEWER
-                    if (Application.platform == RuntimePlatform.Android) {
-                        // Workaround for Quest 2 multi-pass
-                        RenderTextureDescriptor vrDesc = UnityEngine.XR.XRSettings.eyeTextureDesc;
-                        smoothRTWidth = vrDesc.width;
-                        smoothRTHeight = vrDesc.height;
-                        sourceDesc = new RenderTextureDescriptor(smoothRTWidth, smoothRTHeight);
-                        sourceDesc.vrUsage = vrDesc.vrUsage;
-                        sourceDesc.volumeDepth = 1;
-                    } else {
-#endif
-                        sourceDesc = UnityEngine.XR.XRSettings.eyeTextureDesc;
-                        smoothRTWidth = sourceDesc.width;
-                        smoothRTHeight = sourceDesc.height;
-#if UNITY_2022_3_OR_NEWER
-                    }
-#endif
-                } else
-                {
-                    sourceDesc = new RenderTextureDescriptor(smoothRTWidth, smoothRTHeight);
-                    sourceDesc.volumeDepth = 1;
-                }
+                //int smoothRTWidth = cam.pixelWidth;
+                //if (smoothRTWidth <= 0) {
+                //    smoothRTWidth = 1;
+                //}
+                //int smoothRTHeight = cam.pixelHeight;
+                //if (smoothRTHeight <= 0) {
+                //    smoothRTHeight = 1;
+                //}
+                //                if (VRCheck.isVrRunning) {
+                //#if UNITY_2022_3_OR_NEWER
+                //                    if (Application.platform == RuntimePlatform.Android) {
+                //                        if (Application.isPlaying) {
+                //                            GameObject.Find("Capsule")?.SetActive(false);
+                //                        }
+                //                        // Workaround for Quest 2 multi-pass
+                //                        RenderTextureDescriptor vrDesc = UnityEngine.XR.XRSettings.eyeTextureDesc;
+                //                        smoothRTWidth = vrDesc.width;
+                //                        smoothRTHeight = vrDesc.height;
+                //                        sourceDesc = new RenderTextureDescriptor(smoothRTWidth, smoothRTHeight);
+                //                        sourceDesc.vrUsage = vrDesc.vrUsage;
+                //                        sourceDesc.volumeDepth = 1;
+                //                    } else {
+                //#endif
+                //                    sourceDesc = UnityEngine.XR.XRSettings.eyeTextureDesc;
+                //                    smoothRTWidth = sourceDesc.width;
+                //                    smoothRTHeight = sourceDesc.height;
+                //#if UNITY_2022_3_OR_NEWER
+                //                    }
+                //#endif
+                //                } else {
+                //                    sourceDesc = new RenderTextureDescriptor(smoothRTWidth, smoothRTHeight);
+                //                    sourceDesc.volumeDepth = 1;
+                //                }
+
                 sourceDesc.colorFormat = useSmoothOutline && outlineEdgeMode == OutlineEdgeMode.Any ? RenderTextureFormat.ARGB32 : RenderTextureFormat.R8;
                 sourceDesc.msaaSamples = 1;
                 sourceDesc.useMipMap = false;
                 sourceDesc.depthBufferBits = 0;
+
+                int smoothRTWidth = sourceDesc.width;
+                int smoothRTHeight = sourceDesc.height;
 
                 cbHighlight.GetTemporaryRT(sourceRT, sourceDesc, FilterMode.Bilinear);
                 RenderTargetIdentifier sourceTarget = new RenderTargetIdentifier(sourceRT, 0, CubemapFace.Unknown, -1);
@@ -2262,7 +2282,7 @@ namespace HighlightPlus {
             var useDepthRenderBuffer = colorAttachmentBuffer != BuiltinRenderTextureType.CameraTarget && depthAttachmentBuffer == BuiltinRenderTextureType.CameraTarget;
             cbHighlight.SetRenderTarget(colorAttachmentBuffer, useDepthRenderBuffer ? colorAttachmentBuffer : depthAttachmentBuffer);
 #endif
-        } 
+        }
 
         public void UpdateVisibilityState() {
             // isVisible only accounts for cases where there's a single object managed by the highlight effect

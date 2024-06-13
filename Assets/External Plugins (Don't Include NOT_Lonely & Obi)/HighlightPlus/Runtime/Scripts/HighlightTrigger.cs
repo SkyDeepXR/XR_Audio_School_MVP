@@ -291,6 +291,7 @@ namespace HighlightPlus {
                 if (selectOnClick && isMouseButonDown && !keepSelection && !hit) {
                     yield return w; // wait for other potential triggers to act
                     if (HighlightManager.lastTriggerFrame < Time.frameCount) {
+                        if (OnObjectUnSelected != null) OnObjectUnSelected(gameObject);
                         HighlightManager.DeselectAll();
                     }
                 }

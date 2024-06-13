@@ -89,6 +89,9 @@ https://assetstore.unity.com/publishers/15018
 Version history
 ---------------
 
+Version 21.1.1
+- [Fix] VR fixes
+
 Version 21.1
 - Added "Padding" option: creates an empty space between the mesh and the objects
 - Added "Sorting Priority" option to Highlight Effect inspector. Useful to ensure certain effects render on top of others.

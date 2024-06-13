@@ -61,6 +61,7 @@ namespace HighlightPlus {
             RenderTextureDescriptor cameraTextureDescriptor;
             static DistanceComparer effectDistanceComparer = new DistanceComparer();
             bool clearStencil;
+            static RenderTextureDescriptor sourceDesc;
 
             public void Setup(HighlightPlusRenderPassFeature passFeature, ScriptableRenderer renderer) {
                 this.renderPassEvent = passFeature.renderPassEvent;
@@ -101,6 +102,7 @@ namespace HighlightPlus {
                 passData.camera = renderingData.cameraData.camera;
                 passData.colorTarget = cameraColorTarget;
                 passData.depthTarget = cameraDepthTarget;
+                sourceDesc = renderingData.cameraData.cameraTargetDescriptor;
 
                 CommandBuffer cmd = CommandBufferPool.Get("Highlight Plus");
                 cmd.Clear();
@@ -146,7 +148,7 @@ if (!Application.isPlaying) {
                     if ((effect.camerasLayerMask & camLayer) == 0) continue;
 
                     effect.SetCommandBuffer(passData.cmd);
-                    effect.BuildCommandBuffer(passData.camera, passData.colorTarget, passData.depthTarget, passData.clearStencil);
+                    effect.BuildCommandBuffer(passData.camera, passData.colorTarget, passData.depthTarget, passData.clearStencil, ref sourceDesc);
                     passData.clearStencil = false;
                 }
             }
@@ -159,7 +161,8 @@ if (!Application.isPlaying) {
                     builder.AllowPassCulling(false);
 
                     passData.clearStencil = clearStencil;
-                    passData.camera = frameData.Get<UniversalCameraData>().camera;
+                    UniversalCameraData cameraData = frameData.Get<UniversalCameraData>();
+                    passData.camera = cameraData.camera;
 
                     UniversalResourceData resourceData = frameData.Get<UniversalResourceData>();
                     passData.colorTexture = resourceData.activeColorTexture;
@@ -170,6 +173,8 @@ if (!Application.isPlaying) {
                     builder.UseTexture(resourceData.cameraDepthTexture, AccessFlags.Read);
 
                     ConfigureInput(ScriptableRenderPassInput.Depth);
+
+                    sourceDesc = cameraData.cameraTargetDescriptor;
 
                     builder.SetRenderFunc((PassData passData, UnsafeGraphContext context) => {
                         CommandBuffer cmd = CommandBufferHelpers.GetNativeCommandBuffer(context.cmd);
