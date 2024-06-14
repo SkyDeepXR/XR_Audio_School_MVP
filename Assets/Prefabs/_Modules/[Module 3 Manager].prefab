@@ -1996,16 +1996,16 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: RoomObjectModifier, Assembly-CSharp
-        m_MethodName: GetRoomObjectAndDestroy
-        m_Mode: 1
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
   OnTaskStartEvent:
     m_PersistentCalls:
@@ -10617,6 +10617,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: -2.021
       objectReference: {fileID: 0}
+    - target: {fileID: 2893675579362652173, guid: 8d4b93eb22d0a3241a588f66c6325cd4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3316067624661689193, guid: 8d4b93eb22d0a3241a588f66c6325cd4,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -10717,6 +10722,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 1.29
       objectReference: {fileID: 0}
+    - target: {fileID: 4537858657613634196, guid: 8d4b93eb22d0a3241a588f66c6325cd4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4669813279176875008, guid: 8d4b93eb22d0a3241a588f66c6325cd4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10740,7 +10750,7 @@ PrefabInstance:
     - target: {fileID: 5424068176268008733, guid: 8d4b93eb22d0a3241a588f66c6325cd4,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.234
+      value: -0.3
       objectReference: {fileID: 0}
     - target: {fileID: 5424068176268008733, guid: 8d4b93eb22d0a3241a588f66c6325cd4,
         type: 3}
@@ -10826,6 +10836,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 69.96277
+      objectReference: {fileID: 0}
+    - target: {fileID: 5901524217905050385, guid: 8d4b93eb22d0a3241a588f66c6325cd4,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.499
       objectReference: {fileID: 0}
     - target: {fileID: 5901524217905050385, guid: 8d4b93eb22d0a3241a588f66c6325cd4,
         type: 3}
@@ -10956,6 +10971,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.0011
+      objectReference: {fileID: 0}
+    - target: {fileID: 8809702959575218905, guid: 8d4b93eb22d0a3241a588f66c6325cd4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8833224867786059854, guid: 8d4b93eb22d0a3241a588f66c6325cd4,
         type: 3}
@@ -18688,7 +18708,7 @@ PrefabInstance:
     - target: {fileID: 4335340326457787750, guid: fe1e053d8d0bbb8468c5f59c9c498ef4,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.499
+      value: -0.17
       objectReference: {fileID: 0}
     - target: {fileID: 4335340326457787750, guid: fe1e053d8d0bbb8468c5f59c9c498ef4,
         type: 3}
