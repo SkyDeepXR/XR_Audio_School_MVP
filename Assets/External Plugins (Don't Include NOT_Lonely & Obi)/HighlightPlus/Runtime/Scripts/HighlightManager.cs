@@ -4,8 +4,6 @@ using UnityEngine.EventSystems;
 
 namespace HighlightPlus {
 
-    public delegate bool OnObjectSelectionEvent(GameObject obj);
-
     [RequireComponent(typeof(HighlightEffect))]
     [DefaultExecutionOrder(100)]
     [HelpURL("https://kronnect.com/guides/highlight-plus-introduction/")]
