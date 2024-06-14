@@ -52,6 +52,7 @@ public class Module3 : MonoBehaviour
         {
             case Module3GameState.Intro:
                 OnIntroEvent?.Invoke();
+                Debug.Log("intro has begun indeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeed !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
                 break;
             
             case Module3GameState.TransitionedToVR:

@@ -38444,7 +38444,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b07f2ca3663a6041b075ea23c02a6a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playerOrigin: {fileID: 0}
+  _playerOrigin: {fileID: 7063987391655448238}
   _playerHead: {fileID: 0}
 --- !u!1 &8699441960739329192
 GameObject:

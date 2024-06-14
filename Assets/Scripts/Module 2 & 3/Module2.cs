@@ -100,6 +100,7 @@ public class Module2 : MonoBehaviour
             
             case Module2GameState.TaskFinished:
                 OnTaskFinishedEvent?.Invoke();
+                Debug.Log("Alll Right you're good at thissssssssssssss   Successful completion of module 2 has happened  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
                 break;
         }
     }
