@@ -42,4 +42,10 @@ public class DestroyerGun : MonoBehaviour
             Debug.LogWarning("No object hit by raycast.");
         }
     }
+   
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawRay(transform.position, transform.forward * 100);
+    }
 }
