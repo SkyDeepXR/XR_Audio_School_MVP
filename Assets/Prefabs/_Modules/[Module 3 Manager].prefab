@@ -13779,22 +13779,22 @@ PrefabInstance:
     - target: {fileID: 359683284541124699, guid: db57dc689bb8f894c983be79cc9524b5,
         type: 3}
       propertyPath: _gunsList.Array.data[1].delay
-      value: 10
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 359683284541124699, guid: db57dc689bb8f894c983be79cc9524b5,
         type: 3}
       propertyPath: _gunsList.Array.data[2].delay
-      value: 20
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 359683284541124699, guid: db57dc689bb8f894c983be79cc9524b5,
         type: 3}
       propertyPath: _gunsList.Array.data[3].delay
-      value: 30
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 359683284541124699, guid: db57dc689bb8f894c983be79cc9524b5,
         type: 3}
       propertyPath: _gunsList.Array.data[4].delay
-      value: 12
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 501178915795341287, guid: db57dc689bb8f894c983be79cc9524b5,
         type: 3}
