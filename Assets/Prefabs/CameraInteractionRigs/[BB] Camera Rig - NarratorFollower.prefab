@@ -10744,7 +10744,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3673df66324d8f34d9433049c54de631, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _controller: {fileID: 0}
+  _controller: {fileID: 4466116874948653108}
 --- !u!114 &495572085205926191
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12754,7 +12754,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3673df66324d8f34d9433049c54de631, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _controller: {fileID: 0}
+  _controller: {fileID: 5124175210636094201}
 --- !u!114 &6899496368385386032
 MonoBehaviour:
   m_ObjectHideFlags: 0
