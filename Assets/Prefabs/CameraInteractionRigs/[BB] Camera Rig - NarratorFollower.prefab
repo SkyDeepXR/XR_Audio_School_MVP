@@ -8898,7 +8898,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6785586754793049302}
-  - component: {fileID: 563983134310695528}
   - component: {fileID: 4983573883180324917}
   m_Layer: 0
   m_Name: HandInteractorsLeft
@@ -8926,24 +8925,6 @@ Transform:
   - {fileID: 7230023356366254203}
   m_Father: {fileID: 6982316726282051502}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &563983134310695528
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1973738506710873461}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17cef50ab59738b47bdd5ba6901c9649, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _interactors:
-  - {fileID: 0}
-  - {fileID: 7251803506890760714}
-  _activeState: {fileID: 0}
-  _candidateComparer: {fileID: 0}
-  _maxIterationsPerFrame: 3
 --- !u!114 &4983573883180324917
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38444,7 +38425,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b07f2ca3663a6041b075ea23c02a6a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playerOrigin: {fileID: 0}
+  _playerOrigin: {fileID: 7063987391655448238}
   _playerHead: {fileID: 0}
 --- !u!1 &8699441960739329192
 GameObject:
@@ -41579,6 +41560,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Narrator Sphere with Follower
+      objectReference: {fileID: 0}
+    - target: {fileID: 5930372567092482882, guid: f7afaafa8ac826a43831e6ef0ba0823c,
+        type: 3}
+      propertyPath: _narrationAudioEvents.Array.data[0].preDelay
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6265572716677380774, guid: f7afaafa8ac826a43831e6ef0ba0823c,
         type: 3}

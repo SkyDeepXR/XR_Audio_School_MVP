@@ -29,11 +29,11 @@ public class Module03AudioManager : MonoBehaviour
     {
         module3Manager.OnIntroEvent.AddListener(() =>
         {
-            // happens when wall is cracking
-            _gigRevealSource.Play(0); // Plays from a different 2D audio source
+            // happens when wall is cracking -- actually happens after wall cracks.
+            //_gigRevealSource.Play(0); // Plays general audience sounds from a different 2D audio source
             
-           int index = 0; // TODO replace with corresponding index
-           StartCoroutine(PlayNarrationClipCoroutine(index));
+           // int index = 5; // TODO replace with corresponding index
+           // StartCoroutine(PlayNarrationClipCoroutine(index));
         });
         module3Manager.OnTransitionedToVREvent.AddListener(() =>
         {

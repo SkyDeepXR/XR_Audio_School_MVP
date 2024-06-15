@@ -24,6 +24,8 @@ public class WallDestroyer : MonoBehaviour
     private int _gunIndex = 0;
     private bool isStopDestroy;
     
+    [SerializeField] private float preDelay = 0.5f;
+    
 
     private void Start()
     {
@@ -35,38 +37,43 @@ public class WallDestroyer : MonoBehaviour
             return;
         }
 
-        _teleporter = FindObjectOfType<Teleporter>();
-        if (_teleporter != null)
-        {
-            _teleporter.enabled = false;
-        }
+        // _teleporter = FindObjectOfType<Teleporter>();
+        // if (_teleporter != null)
+        // {
+        //     _teleporter.enabled = false;
+        // }
     }
 
     private void Update()
     {
-        if (OVRInput.GetDown(OVRInput.Button.One))
-        {
-            StartDestroyingWall();
-        }
+        // if (OVRInput.GetDown(OVRInput.Button.One))
+        // {
+        //     StartDestroyingWall();
+        // }
         
     }
 
     public void StartDestroyingWall()
     {
         Transform centerEyeAnchor = _cameraRig.centerEyeAnchor;
-        
+    
         // Set position and rotation to match the player's gaze direction
         transform.position = centerEyeAnchor.position + centerEyeAnchor.forward * eyePositionOffset;
         transform.rotation = Quaternion.LookRotation(centerEyeAnchor.forward, Vector3.up);
-        
+    
         if (_teleporter != null)
         {
             _teleporter.enabled = true;
         }
         StopAllCoroutines();
-        StartCoroutine(CallDestroyWallRepeatedly());
+        StartCoroutine(CallDestroyWallWithDelay(preDelay));
     }
 
+    private IEnumerator CallDestroyWallWithDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        StartCoroutine(CallDestroyWallRepeatedly());
+    }
   
     private IEnumerator CallDestroyWallRepeatedly()
     {
