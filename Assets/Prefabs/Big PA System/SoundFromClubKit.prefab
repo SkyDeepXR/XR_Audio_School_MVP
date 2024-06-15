@@ -1371,7 +1371,7 @@ MonoBehaviour:
   syncPlayDelay: 0.27
   pitch: 1
   loop: 0
-  autoPlayOnAwake: 1
+  autoPlayOnAwake: 0
   musicLayers:
   - name: Percussion
     koreography: {fileID: 11400000, guid: 4cd6dfec745520a4c84aaa55a6c59fc0, type: 2}
@@ -1616,7 +1616,7 @@ Transform:
   m_GameObject: {fileID: 8965975763866928904}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 1.08, z: 5.03}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

@@ -33662,7 +33662,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2188765620812113320
 Transform:
   m_ObjectHideFlags: 0
@@ -58794,7 +58794,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8734435948268980819
 Transform:
   m_ObjectHideFlags: 0
@@ -73123,7 +73123,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8622457270718209513
 Transform:
   m_ObjectHideFlags: 0
@@ -75532,7 +75532,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &5307118225002726490
 Transform:
   m_ObjectHideFlags: 0
@@ -80182,6 +80182,9 @@ MonoBehaviour:
   blockId: e47682b9-c270-40b1-b16d-90b627a5ce1b
   instanceId: e5e093f6-4f89-4c75-b68c-090d336fbd4a
   version: 1
+  installationRoutineCheckpoint:
+    _installationRoutineId: 
+    _installationVariants: []
 --- !u!114 &3335576161019142522
 MonoBehaviour:
   m_ObjectHideFlags: 0
