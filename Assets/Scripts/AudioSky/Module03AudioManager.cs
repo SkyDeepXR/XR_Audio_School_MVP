@@ -32,15 +32,15 @@ public class Module03AudioManager : MonoBehaviour
             // happens when wall is cracking
             _gigRevealSource.Play(0); // Plays from a different 2D audio source
             
-           // int index = 0; // TODO replace with corresponding index
-            //StartCoroutine(PlayNarrationClipCoroutine(index));
+           int index = 0; // TODO replace with corresponding index
+           StartCoroutine(PlayNarrationClipCoroutine(index));
         });
         module3Manager.OnTransitionedToVREvent.AddListener(() =>
         {
             // happens when user teleports outside MRUK room
             
             int index = 0; // TODO replace with corresponding index
-            StartCoroutine(PlayNarrationClipCoroutine(3));
+            StartCoroutine(PlayNarrationClipCoroutine(index));
         });
         module3Manager.OnTaskStartEvent.AddListener(() =>
         {
@@ -60,7 +60,7 @@ public class Module03AudioManager : MonoBehaviour
         {
             // happens when user successfully connects all required connections, and about to start performance
             
-            int index = 4; // TODO replace with corresponding index
+            int index = 2; // TODO replace with corresponding index
             StartCoroutine(PlayNarrationClipCoroutine(index));
             
             
@@ -69,7 +69,7 @@ public class Module03AudioManager : MonoBehaviour
         {
             // happens when performance starts
             
-            int index = 2; // TODO replace with corresponding index
+            int index = 4; // TODO replace with corresponding index
             StartCoroutine(PlayNarrationClipCoroutine(2));  // This VO tells player to press button for band to start.
             
             // PLAYER MUST PRESS BUTTON FOR BAND TO START PLAYING or can begin with method below.

@@ -3,24 +3,25 @@ using System.Collections;
 using System.Collections.Generic;
 using Meta.XR.Locomotion.Teleporter;
 using UnityEngine;
+using UnityEngine.Serialization;
 using Random = UnityEngine.Random;
 
+[Serializable]
+class  Guns
+{
+    public DestroyerGun gun;
+   public float delay;
+}
 public class WallDestroyer : MonoBehaviour
 {
     
     [SerializeField] private float eyePositionOffset = 1.2f;
     
-    [SerializeField] private float delays;
-   
-    [SerializeField] private DestroyerGun _gun1;
-    [SerializeField] private DestroyerGun _gun2;
-    [SerializeField] private DestroyerGun _gun3;
-    [SerializeField] private DestroyerGun _gun4;
-
+    [Space] [SerializeField] private List<Guns> _gunsList;
  
     private OVRCameraRig _cameraRig;
     private Teleporter _teleporter;
-    private int count = 1;
+    private int _gunIndex = 0;
     private bool isStopDestroy;
     
 
@@ -72,37 +73,17 @@ public class WallDestroyer : MonoBehaviour
         
         while (!isStopDestroy)
         {
-            Debug.Log($"<color=blue> count value inside while: {count} called</color>");
-            yield return new WaitForSeconds(delays);
-            if (count == 1)
+            Debug.Log($"<color=blue> index value inside while: {_gunIndex} called</color>");
+            yield return new WaitForSeconds(_gunsList[_gunIndex].delay);
+            _gunsList[_gunIndex].gun.DestroyWall(_gunIndex);
+            _gunIndex++;
+
+           
+            if (_gunIndex == _gunsList.Count)
             {
-                _gun1.DestroyWall(count);
-                count++;
-            }
-            else if (count == 2)
-            {
-                _gun2.DestroyWall(count);
-                count++;
-            }
-            else if (count == 3)
-            {
-                _gun3.DestroyWall(count);
-                count++;
-            }
-            else if (count == 4)
-            {
-                _gun4.DestroyWall(count);
-                count++;
                 isStopDestroy = true;
             }
         }
     }
-
     
-
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawRay(transform.position, transform.forward * 100);
-    }
 }
