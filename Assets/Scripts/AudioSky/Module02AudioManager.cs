@@ -85,6 +85,13 @@ public class Module02AudioManager : MonoBehaviour
             int index = 10; // TODO replace with corresponding index
             StartCoroutine(PlayNarrationClipCoroutine(index));
         });
+        module2Manager.OnTaskRecapEvent.AddListener(() =>
+        {
+            // VO acknowledging what has been learned.
+            
+            // int index = 11; // TODO replace with corresponding index
+            // StartCoroutine(PlayNarrationClipCoroutine(index));
+        });
     }
     
     public void PlayNarrationClip(int clipIndex)  // Play voiceover clip according to their index number. Call this from an Event Manager.

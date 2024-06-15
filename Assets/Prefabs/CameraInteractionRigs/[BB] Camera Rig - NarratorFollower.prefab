@@ -41561,6 +41561,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Narrator Sphere with Follower
       objectReference: {fileID: 0}
+    - target: {fileID: 5426332546724318679, guid: f7afaafa8ac826a43831e6ef0ba0823c,
+        type: 3}
+      propertyPath: _narrationAudioEvents.Array.data[8].preDelay
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5426332546724318679, guid: f7afaafa8ac826a43831e6ef0ba0823c,
+        type: 3}
+      propertyPath: _narrationAudioEvents.Array.data[9].preDelay
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 5930372567092482882, guid: f7afaafa8ac826a43831e6ef0ba0823c,
         type: 3}
       propertyPath: _narrationAudioEvents.Array.data[0].preDelay

@@ -15,13 +15,14 @@ public class Module2 : MonoBehaviour
 
     public enum Module2GameState
     {
-        Tutorial1Intro,
-        Tutorial1,
-        Tutorial2Intro,
-        Tutorial2,
-        TaskIntro,
-        TaskStart,
-        TaskFinished
+        Tutorial1Intro = 0,
+        Tutorial1 = 1,
+        Tutorial2Intro = 2,
+        Tutorial2 = 3,
+        TaskIntro = 4,
+        TaskStart = 5,
+        TaskFinished = 6,
+        TaskRecap = 7
     }
 
     [SerializeField, ReadOnly] private Module2GameState gameState;
@@ -35,6 +36,7 @@ public class Module2 : MonoBehaviour
     [SerializeField] public UnityEvent OnTaskStartEvent;
     [SerializeField] public UnityEvent OnTaskFailedEvent;
     [SerializeField] public UnityEvent OnTaskFinishedEvent;
+    [SerializeField] public UnityEvent OnTaskRecapEvent;
 
     void Update()
     {
@@ -100,6 +102,12 @@ public class Module2 : MonoBehaviour
             
             case Module2GameState.TaskFinished:
                 OnTaskFinishedEvent?.Invoke();
+                break;
+            
+            case Module2GameState.TaskRecap:
+                Debug.Log("Recappppppppppppppppppppppppppppppppppppppppppppppppppppppppp!!!!!!!!!!!!!");
+                selfTaskAssignmentSetup.SetActive(false);
+                OnTaskRecapEvent?.Invoke();
                 break;
         }
     }
